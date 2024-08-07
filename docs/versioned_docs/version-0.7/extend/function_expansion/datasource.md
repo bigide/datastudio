@@ -587,9 +587,9 @@ public class HiveQuery extends AbstractDBQuery {
 ----
 
 ## 前端开发
-- **dinky-web** 为 Dinky 的前端模块
-- 扩展数据源相关表单所在路径: `dinky-web/src/pages/DataBase/`
-  - 修改 `dinky-web/src/pages/DataBase/components/DBForm.tsx` 的 **const data** 中 添加如下:
+- **datastudio-web** 为 Dinky 的前端模块
+- 扩展数据源相关表单所在路径: `datastudio-web/src/pages/DataBase/`
+  - 修改 `datastudio-web/src/pages/DataBase/components/DBForm.tsx` 的 **const data** 中 添加如下:
 eg:
 ```shell
          {
@@ -602,10 +602,10 @@ eg:
 注意: ``此处数据源类型遵照大驼峰命名规则``
 
   - 添加数据源logo图片
-    - 路径: `dinky-web/public/database/`
+    - 路径: `datastudio-web/public/database/`
     - logo 图下载参考: [https://www.iconfont.cn](https://www.iconfont.cn) 
-    - logo 图片存放位置: `dinky-web/public/database`   
-  - 修改 `dinky-web/src/pages/DataBase/DB.ts` , 添加如下:
+    - logo 图片存放位置: `datastudio-web/public/database`   
+  - 修改 `datastudio-web/src/pages/DataBase/DB.ts` , 添加如下:
 eg:
 ```shell
     case 'hive':  
@@ -614,7 +614,7 @@ eg:
 ```
 如下图:
 ![extened_datasource_datasourceform](http://pic.dinky.org.cn/dinky/docs/zh-CN/extend/function_expansion/datasource/extened_datasource_datasourceform.jpg)
-   - 创建数据源相关表单属性在: `dinky-web/src/pages/DataBase/components/DataBaseForm.tsx` 此处无需修改
+   - 创建数据源相关表单属性在: `datastudio-web/src/pages/DataBase/components/DataBaseForm.tsx` 此处无需修改
 
 ----
 

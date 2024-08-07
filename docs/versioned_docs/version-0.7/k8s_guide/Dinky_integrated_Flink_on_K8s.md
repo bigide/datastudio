@@ -637,7 +637,7 @@ web端
 
 在`Dinky_HOME/config/DinkyFlinkDockerfile`提供了以下文件，在测试的时候发现豆瓣源可能会卡住，所以pip镜像源替换为了阿里云源，并且在17行的`flink-python_*`会报错不存在，所以将下划线删除，**直接复制下方配置即可**
 
-- `dlink-app-1.16-0.7.3-jar-with-dependencies.jar`文件下载dinky二进制包并解压在` dlink-release-版本号/jar/`下方即可找到对应版本，复制到dockerfile同级目录，以及把`dinky-release-版本号/plugins`也复制到dockerfile统计目录，进行编译打包
+- `dlink-app-1.16-0.7.3-jar-with-dependencies.jar`文件下载dinky二进制包并解压在` dlink-release-版本号/jar/`下方即可找到对应版本，复制到dockerfile同级目录，以及把`datastudio-release-版本号/plugins`也复制到dockerfile统计目录，进行编译打包
 - 【可选】如果有额外需求可把相关依赖也放于dinky的plugins中，一同把依赖放入打包到`lib`下 
 
 dockerfile文件
@@ -685,7 +685,7 @@ COPY ./dlink-app-1.16-0.7.3-jar-with-dependencies.jar plugins/* $FLINK_HOME/lib/
 开始build，**更换自己的镜像地址，别用本例的**
 
 ```sh
-docker build -t registry.cn-beijing.aliyuncs.com/yilinwei/dinky-native-application:flink1.16.2 .
+docker build -t registry.cn-beijing.aliyuncs.com/yilinwei/datastudio-native-application:flink1.16.2 .
 ```
 
 ![image-20230923133050795](http://pic.dinky.org.cn/dinky/docs/test/202312201517177.png) 
@@ -697,7 +697,7 @@ docker build -t registry.cn-beijing.aliyuncs.com/yilinwei/dinky-native-applicati
 然后将其push到阿里云仓库中,**更换自己的镜像地址，别用本例的**，镜像比较大，得等待一定的时间
 
 ```sh
-docker push registry.cn-beijing.aliyuncs.com/yilinwei/dinky-native-application:flink1.16.2
+docker push registry.cn-beijing.aliyuncs.com/yilinwei/datastudio-native-application:flink1.16.2
 ```
 
 ![image-20230923133811521](http://pic.dinky.org.cn/dinky/docs/test/202312201517745.png) 

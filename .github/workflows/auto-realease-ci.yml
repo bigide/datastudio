@@ -120,4 +120,4 @@ jobs:
           body: |
             ${{ inputs.release_notes }}
           files: |
-            ./build/dinky-release-*.tar.gz
+            ./build/datastudio-release-*.tar.gz

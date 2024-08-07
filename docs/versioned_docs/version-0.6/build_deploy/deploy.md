@@ -105,7 +105,7 @@ nginx -v
 ps -ef|grep nginx
 ```
 
-说明: Dinky-0.5.0 以上版本部署 nginx 为可选
+说明: datastudio-0.5.0 以上版本部署 nginx 为可选
 
 ### nginx中配置 Dinky（可选）
 

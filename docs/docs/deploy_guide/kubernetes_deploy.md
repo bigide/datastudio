@@ -17,10 +17,10 @@ https://www.dinky.org.cn/download/download
 
 ### 修改配置
 #### 修改镜像地址
-cd dinky-release-${FLINK-VERSION}-${DINKY-VERSION}/deploy/kubernetes/helm/dinky
+cd datastudio-release-${FLINK-VERSION}-${datastudio-VERSION}/deploy/kubernetes/helm/dinky
 ```yaml
 image:
-  repository: "dinkydocker/dinky-standalone-server"
+  repository: "dinkydocker/datastudio-standalone-server"
   pullPolicy: "Always"
   tag: "1.0.3-flink1.17"
   pullSecret: ""
@@ -34,7 +34,7 @@ mysql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 ```
 如果数据源为postgresql，则修改如下
 ```yaml
@@ -44,7 +44,7 @@ postgresql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 ```
 修改flink版本，如下修改为1.17版本
 ```yaml
@@ -82,7 +82,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: "dinkydocker/dinky-standalone-server"
+  repository: "dinkydocker/datastudio-standalone-server"
   pullPolicy: "Always"
   tag: "1.0.3-flink1.17"
   pullSecret: ""
@@ -93,7 +93,7 @@ mysql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 
 postgresql:
   enabled: false
@@ -101,7 +101,7 @@ postgresql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 
 externalDatabase:
   enabled: false
@@ -238,7 +238,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 image:
-  repository: "dinkydocker/dinky-standalone-server"
+  repository: "dinkydocker/datastudio-standalone-server"
   pullPolicy: "Always"
   tag: "1.0.3-flink1.17"
   pullSecret: ""
@@ -249,7 +249,7 @@ mysql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 
 postgresql:
   enabled: false
@@ -257,7 +257,7 @@ postgresql:
   auth:
     username: "dinky"
     password: "bigdata123!@#"
-    database: "dinky-dev-1-17"
+    database: "datastudio-dev-1-17"
 
 externalDatabase:
   enabled: true
@@ -345,14 +345,14 @@ dinkyServiceAccount:
 ### 部署
 将名为 dinky 的版本(release) 发布到 dinky 的命名空间中：
 ```shell
-cd dinky-release-${FLINK-VERSION}-${DINKY-VERSION}/deploy/kubernetes/helm/dinky
+cd datastudio-release-${FLINK-VERSION}-${datastudio-VERSION}/deploy/kubernetes/helm/dinky
 
 helm install dinky . -n dinky
 ```
 
 ### 卸载
 ```shell
-cd dinky-release-${FLINK-VERSION}-${DINKY-VERSION}/deploy/kubernetes/helm/dinky
+cd datastudio-release-${FLINK-VERSION}-${datastudio-VERSION}/deploy/kubernetes/helm/dinky
 
 helm uninstall dinky  -n dinky
 ```

@@ -66,9 +66,9 @@ Dinky 学习了 ``Apache Dolphinscheduler`` 的插件扩展机制，可以在 Di
 ----
 
 ## 前端开发
-- **dinky-web** 为 Dinky 的前端模块
-- 扩展告警插件相关表单所在路径: `dinky-web/src/pages/AlertInstance`
-  - 修改 `dinky-web/src/pages/AlertInstance/conf.ts` 
+- **datastudio-web** 为 Dinky 的前端模块
+- 扩展告警插件相关表单所在路径: `datastudio-web/src/pages/AlertInstance`
+  - 修改 `datastudio-web/src/pages/AlertInstance/conf.ts` 
 
   **ALERT_TYPE** 添加如下 eg:
   ```
@@ -86,7 +86,7 @@ Dinky 学习了 ``Apache Dolphinscheduler`` 的插件扩展机制，可以在 Di
 ![extend_alert_conf](http://pic.dinky.org.cn/dinky/docs/zh-CN/extend/function_expansion/alert/extend_alert_conf.png)
 
 
-  修改 `dinky-web/src/pages/AlertInstance/icon.tsx` 的 **getAlertIcon** 中 
+  修改 `datastudio-web/src/pages/AlertInstance/icon.tsx` 的 **getAlertIcon** 中 
   
   添加如下 eg:
 ```
@@ -108,7 +108,7 @@ export const EmailSvg = () => (
 
 
 
-  - 修改 `dinky-web/src/pages/AlertInstance/components/AlertInstanceChooseForm.tsx` 
+  - 修改 `datastudio-web/src/pages/AlertInstance/components/AlertInstanceChooseForm.tsx` 
  
   追加如下  eg: 
 ```
@@ -130,8 +130,8 @@ export const EmailSvg = () => (
       }
 ```
 其中需要修改的地方为
--  `EMAIL` 替换为上述 **dinky-web/src/pages/AlertInstance/conf.ts** 中 **ALERT_TYPE** 的新增类型
--  `EmailForm` 为新建告警表单文件 **dinky-web/src/pages/AlertInstance/components/EmailForm.tsx** 中的 **EmailForm** .
+-  `EMAIL` 替换为上述 **datastudio-web/src/pages/AlertInstance/conf.ts** 中 **ALERT_TYPE** 的新增类型
+-  `EmailForm` 为新建告警表单文件 **datastudio-web/src/pages/AlertInstance/components/EmailForm.tsx** 中的 **EmailForm** .
 
 如下图:
 ![extened_alert_choose_form](http://pic.dinky.org.cn/dinky/docs/zh-CN/extend/function_expansion/alert/extened_alert_choose_form.png)

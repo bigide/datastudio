@@ -80,8 +80,8 @@ Clone 完成后, 等待 IDEA 自动下载依赖(前提 IDEA 已经正确配置�
 
 ```bash
 # 创建某一路径用来存放 Dinky 源码
-mkdir -p /opt/dinky-source-code
-cd /opt/dinky-source-code
+mkdir -p /opt/datastudio-source-code
+cd /opt/datastudio-source-code
 # Clone 项目
 git clone https://github.com/DataLinkDC/dinky.git
 ```
@@ -91,7 +91,7 @@ git clone https://github.com/DataLinkDC/dinky.git
 > 如果你看到此处,那么默认你是对 Maven 有一定了解并熟练使用的,如果你不了解 Maven/不会使用 Maven,请自行百度/谷歌/Stackoverflow...解决
 
 ```bash
-cd /opt/dinky-source-code
+cd /opt/datastudio-source-code
 
 # 编译打包 Profile, 注意 scala 支持 2.11 和 2.12, 请根据实际情况进行选择,jdk 支持 8/11,请根据实际情况进行选择,不选jdk11默认使用系统内的jdk8
 mvn clean package -DskipTests=true -P prod,jdk11,flink-single-version,scala-2.12,aliyun,flink-1.16,web

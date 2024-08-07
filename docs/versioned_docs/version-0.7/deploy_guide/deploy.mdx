@@ -20,8 +20,8 @@ import TabItem from '@theme/TabItem';
 Dinky 不依赖任何外部的 Hadoop 或者 Flink 环境，可以单独部署在 flink、 hadoop 和 K8S 集群之外，完全解耦，支持同时连接多个不同的集群实例进行运维。
 
 ```shell
-tar -zxvf dinky-release-{version}.tar.gz
-mv dinky-release-{version} dinky
+tar -zxvf datastudio-release-{version}.tar.gz
+mv datastudio-release-{version} dinky
 cd dinky
 ```
 
@@ -46,7 +46,7 @@ Dinky 需要具备自身的 Flink 环境，该 Flink 环境的实现需要用户
 
 :::warning 注意事项
 Dinky 当前版本的 yarn 的 perjob 与 application 执行模式依赖 flink-shade-hadoop ，如果你的 Hadoop 版本为 2+ 或 3+，需要额外添加 flink-shade-hadoop-uber-3 包，请手动删除该包内部的 javax.servlet 等冲突内容。
-当然如果你的 Hadoop 为 3+ 也可以自行编译对于版本的 dinky-client-hadoop.jar 以替代 uber 包，
+当然如果你的 Hadoop 为 3+ 也可以自行编译对于版本的 datastudio-client-hadoop.jar 以替代 uber 包，
 :::
 
 将 flink-shade-hadoop 上传到到 plugins 文件目录下，使用 flink-shade-hadoop-3 地址如下：
@@ -245,7 +245,7 @@ nginx -v
 ps -ef|grep nginx
 ```
 
-说明: Dinky-0.5.0 以上版本部署 nginx 为可选
+说明: datastudio-0.5.0 以上版本部署 nginx 为可选
 
 ### nginx中配置 Dinky（可选）
 

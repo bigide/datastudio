@@ -121,35 +121,35 @@ spec:
           {{- end }}
           volumeMounts:
             - mountPath: /dinky/conf/application.properties
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application.properties
             - mountPath: /dinky/conf/application.yml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application.yml
             - mountPath: /dinky/conf/application-h2.yml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application-h2.yml
             - mountPath: /dinky/conf/application-jmx.yml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application-jmx.yml
             - mountPath: /dinky/conf/application-mysql.yml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application-mysql.yml
             - mountPath: /dinky/conf/application-pgsql.yml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: application-pgsql.yml
             - mountPath: /dinky/conf/log4j2.xml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: log4j2.xml
             - mountPath: /dinky/conf/jmx/jmx_exporter_config.yaml
-              name: dinky-config-volume
+              name: datastudio-config-volume
               subPath: jmx_exporter_config.yaml
           resources:
             {{- toYaml .Values.spec.resources | nindent 12 }}
       volumes:
-        - name: dinky-config-volume
+        - name: datastudio-config-volume
           configMap:
-            name: dinky-config
+            name: datastudio-config
             items:
               - key: application.properties
                 path: application.properties

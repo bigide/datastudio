@@ -33,7 +33,7 @@ Dinky内置了一个Flink MiniCluster，提交Local模式作业后，Dinky会启
 
 **其他配置的列表里没有我需要的参数怎么办？**
 
-为防止误输入，错误输入，Dinky提供了常用的Flink配置，如果您需要的参数不存在，可以修改dinky安装目录下的 `dinky-loader/FlinkConfClass`
+为防止误输入，错误输入，Dinky提供了常用的Flink配置，如果您需要的参数不存在，可以修改dinky安装目录下的 `datastudio-loader/FlinkConfClass`
 文件，
 新增一行为该参数所在flink源码中的全路径类名，重启dinky即可。
 

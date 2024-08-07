@@ -77,7 +77,7 @@ cd flink
 
 ```bash
 
-wget https://github.com/DataLinkDC/dinky/releases/download/v1.0.0-rc2/dinky-release-1.0.0-rc2.tar.gz
+wget https://github.com/DataLinkDC/dinky/releases/download/v1.0.0-rc2/datastudio-release-1.0.0-rc2.tar.gz
 
 
 ```
@@ -86,9 +86,9 @@ wget https://github.com/DataLinkDC/dinky/releases/download/v1.0.0-rc2/dinky-rele
 
 ```bash
 
-tar -zxvf dinky-release-1.0.0-rc2.tar.gz
+tar -zxvf datastudio-release-1.0.0-rc2.tar.gz
 
-mv dinky-release-1.0.0-rc2 dinky
+mv datastudio-release-1.0.0-rc2 dinky
 
 ```
 
@@ -98,7 +98,7 @@ mv dinky-release-1.0.0-rc2 dinky
 
 > 如果选择使用 H2 数据库, 请跳过本节 ,MySQL 安装步骤在这里不再赘述, 请自行百度/谷歌/必应...
 
-> 安装完成之后 创建 dinky 数据库, 并设置账户密码,也可使用默认账户密码, 创建完成数据库之后需要执行初始化 sql 脚本, 脚本路径为 dinky/sql/dinky-mysql.sql
+> 安装完成之后 创建 dinky 数据库, 并设置账户密码,也可使用默认账户密码, 创建完成数据库之后需要执行初始化 sql 脚本, 脚本路径为 dinky/sql/datastudio-mysql.sql
 
 修改 conf/application-mysql.yml 文件, 修改数据库连接信息
 

@@ -71,7 +71,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ### 初始化依赖
 
-代码 Clone 完成后，进入 `dinky-web` 目录，执行以下命令安装依赖
+代码 Clone 完成后，进入 `datastudio-web` 目录，执行以下命令安装依赖
 
 ```bash
 npm install --force
@@ -79,7 +79,7 @@ npm install --force
 
 ### 启动前端
 
-在 `dinky-web` 目录下执行以下命令启动前端,也可在 IDEA 中打开`dinky-web`下的`package.json`文件,点击`dev`左侧启动按钮启动前端
+在 `datastudio-web` 目录下执行以下命令启动前端,也可在 IDEA 中打开`datastudio-web`下的`package.json`文件,点击`dev`左侧启动按钮启动前端
 
 ```bash
 npm run dev
@@ -160,7 +160,7 @@ Dinky开发环境配置有两种模式，分别是 provided 环境和 compile �
 
 > 以 MySQL 为例, 如果使用 PostgresSQL/H2 请自行修改,注意: 默认使用 H2 数据库时无需修改如下配置,直接 [启动后端服务](#启动后端服务)
 
-- 修改 dinky-admin/src/main/resources/application-mysql.yml 文件,配置相应的数据库连接信息
+- 修改 datastudio-admin/src/main/resources/application-mysql.yml 文件,配置相应的数据库连接信息
 
 ```yaml
 spring:
@@ -171,7 +171,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 ``` 
 
-- 修改 dinky-admin/src/main/resources/application.yml 文件，将`spring.profiles.active` 设置为 mysql
+- 修改 datastudio-admin/src/main/resources/application.yml 文件，将`spring.profiles.active` 设置为 mysql
 
 ```yaml
 spring:
@@ -189,14 +189,14 @@ spring:
 
 ### 初始化数据库
 
-在 MySQL 数据库自行创建用户/使用默认 root 用户,并创建 dinky 数据库,在 dinky 数据库中执行 script/sql/dinky-mysql.sql
+在 MySQL 数据库自行创建用户/使用默认 root 用户,并创建 dinky 数据库,在 dinky 数据库中执行 script/sql/datastudio-mysql.sql
 文件。此外 script/sql/upgrade 目录下存放了了各版本的升级 sql ,如需执行:请依次按照版本号执行。
 
 以上文件修改完成后，就可以启动Dinky。
 
 ### 启动后端服务
 
-启动 dinky-admin/src/main/java/org/dinky/ 下的 Dinky 启动类，可见如下信息:
+启动 datastudio-admin/src/main/java/org/dinky/ 下的 Dinky 启动类，可见如下信息:
 
 ![localdebug_idea_console_log](http://pic.dinky.org.cn/dinky/docs/zh-CN/developer_guide/local_debug/localdebug_idea_console_log.png)
 

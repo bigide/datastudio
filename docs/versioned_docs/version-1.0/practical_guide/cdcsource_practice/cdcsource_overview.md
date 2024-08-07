@@ -69,13 +69,13 @@ sink，也可以使用 FlinkSQL 无需修改代码直接扩展新的 sink。
 
 ### Flink 版本区分
 
-- 在 Dinky v1.0.0 之前 dinky-client-1.14 内的整库同步能力最多且主要维护，如果要使用其他 flink 版本的整库同步，如果 SQLSink
+- 在 Dinky v1.0.0 之前 datastudio-client-1.14 内的整库同步能力最多且主要维护，如果要使用其他 flink 版本的整库同步，如果 SQLSink
   不满足需求，需要DataStreamSink 支持，请手动仿照 dlink-client-1.14 扩展相应代码实现，很简单。
-- Dinky v1.0.0 之后，整库同步整个模块进行单独维护，不再重依赖于 dinky-client 版本，实现更加灵活. 扩展更加简单方便
+- Dinky v1.0.0 之后，整库同步整个模块进行单独维护，不再重依赖于 datastudio-client 版本，实现更加灵活. 扩展更加简单方便
 
 ### 其他 FlinkCDC 支持
 
-- Dinky v1.0.0 之后,如需扩展其他 FlinkCDC 支持，可以在 `dinky-cdc` 模块的下属子模块中进行扩展
+- Dinky v1.0.0 之后,如需扩展其他 FlinkCDC 支持，可以在 `datastudio-cdc` 模块的下属子模块中进行扩展
 
 ### 依赖上传
 
@@ -83,9 +83,9 @@ sink，也可以使用 FlinkSQL 无需修改代码直接扩展新的 sink。
 
 ```
 # 将下面 Dinky根目录下 整库同步依赖包放置 $FLINK_HOME/lib下
-lib/dinky-client-base-${version}.jar
-lib/dinky-common-${version}.jar
-extends/flink${flink-version}/dinky/dinky-client-${version}.jar
+lib/datastudio-client-base-${version}.jar
+lib/datastudio-common-${version}.jar
+extends/flink${flink-version}/dinky/datastudio-client-${version}.jar
 ```
 
 ### Application 模式提交

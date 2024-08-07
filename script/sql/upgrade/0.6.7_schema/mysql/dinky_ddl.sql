@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `dinky_upload_file_record` (
   `id` tinyint NOT NULL AUTO_INCREMENT COMMENT 'id',
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'upload file name',
   `enabled` tinyint(1) DEFAULT NULL COMMENT 'is enable',
-  `file_type` tinyint DEFAULT '-1' COMMENT 'upload file type ，such as：hadoop-conf(1)、flink-conf(2)、flink-lib(3)、user-jar(4)、dinky-jar(5)，default is -1 ',
+  `file_type` tinyint DEFAULT '-1' COMMENT 'upload file type ，such as：hadoop-conf(1)、flink-conf(2)、flink-lib(3)、user-jar(4)、datastudio-jar(5)，default is -1 ',
   `target` tinyint NOT NULL COMMENT 'upload file of target ，such as：local(1)、hdfs(2)',
   `file_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'file name',
   `file_parent_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT 'file parent path',

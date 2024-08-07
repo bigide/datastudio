@@ -22,30 +22,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.dinky</groupId>
-    <artifactId>dinky</artifactId>
+    <artifactId>datastudio</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
-    <name>Dinky : Real-time Computing Platform</name>
+    <name>DataStudio : Real-time Computing Platform</name>
 
     <modules>
-        <module>dinky-flink</module>
-        <module>dinky-common</module>
-        <module>dinky-client</module>
-        <module>dinky-cdc</module>
-        <module>dinky-catalog</module>
-        <module>dinky-gateway</module>
-        <module>dinky-function</module>
-        <module>dinky-metadata</module>
-        <module>dinky-connectors</module>
-        <module>dinky-extends</module>
-        <module>dinky-alert</module>
-        <module>dinky-daemon</module>
-        <module>dinky-scheduler</module>
-        <module>dinky-core</module>
-        <module>dinky-app</module>
-        <module>dinky-admin</module>
-        <module>dinky-assembly</module>
+        <module>datastudio-flink</module>
+        <module>datastudio-common</module>
+        <module>datastudio-client</module>
+        <module>datastudio-cdc</module>
+        <module>datastudio-catalog</module>
+        <module>datastudio-gateway</module>
+        <module>datastudio-function</module>
+        <module>datastudio-metadata</module>
+        <module>datastudio-connectors</module>
+        <module>datastudio-extends</module>
+        <module>datastudio-alert</module>
+        <module>datastudio-daemon</module>
+        <module>datastudio-scheduler</module>
+        <module>datastudio-core</module>
+        <module>datastudio-app</module>
+        <module>datastudio-admin</module>
+        <module>datastudio-assembly</module>
     </modules>
 
     <properties>
@@ -61,11 +61,11 @@
         <docker.java.version>3.2.14</docker.java.version>
         <druid-starter>1.2.15</druid-starter>
         <easy.rules.version>4.1.0</easy.rules.version>
-        <fastjson2.version>2.0.41</fastjson2.version>
+        <fastjson2.version>2.0.52</fastjson2.version>
         <flink.version>1.18.1</flink.version>
         <flyway.version>10.10.12</flyway.version>
         <guava.version>32.1.3-jre</guava.version>
-        <h2database.version>1.4.200</h2database.version>
+        <h2database.version>2.2.224</h2database.version>
         <hamcrest.version>1.3</hamcrest.version>
         <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <httpclient.version>4.5.13</httpclient.version>
@@ -83,10 +83,10 @@
         <knife4j.version>4.1.0</knife4j.version>
         <kubernetes-client.version>5.12.4</kubernetes-client.version>
         <log4j.version>2.19.0</log4j.version>
-        <lombok.version>1.18.24</lombok.version>
+        <lombok.version>1.18.34</lombok.version>
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
         <maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.5.0</maven-dependency-plugin.version>
         <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
         <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
@@ -103,7 +103,7 @@
         <org.commonmark>0.21.0</org.commonmark>
         <oshi.version>6.4.2</oshi.version>
         <poi.version>5.2.3</poi.version>
-        <postgresql.version>42.5.1</postgresql.version>
+        <postgresql.version>42.7.3</postgresql.version>
         <powermock.version>2.0.9</powermock.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -111,7 +111,7 @@
         <reflections.version>0.10.2</reflections.version>
         <revision>1.1.0</revision>
         <sa-token.version>1.37.0</sa-token.version>
-        <scala.version>2.12.10</scala.version>
+        <scala.version>2.12.17</scala.version>
         <!--  `provided` for product environment ,`compile` for dev environment  -->
         <scope.runtime>provided</scope.runtime>
         <smily.version>1.12.1</smily.version>
@@ -123,7 +123,7 @@
         <spring.ldap.version>3.1.0</spring.ldap.version>
         <sqlite-jdbc.version>3.46.0.0</sqlite-jdbc.version>
         <target.java.version>8</target.java.version>
-        <testcontainers.version>1.16.2</testcontainers.version>
+        <testcontainers.version>1.19.8</testcontainers.version>
     </properties>
 
     <dependencyManagement>
@@ -398,137 +398,137 @@
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-core</artifactId>
+                <artifactId>datastudio-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-base</artifactId>
+                <artifactId>datastudio-client-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.14</artifactId>
+                <artifactId>datastudio-client-1.14</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.15</artifactId>
+                <artifactId>datastudio-client-1.15</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.16</artifactId>
+                <artifactId>datastudio-client-1.16</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.17</artifactId>
+                <artifactId>datastudio-client-1.17</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.18</artifactId>
+                <artifactId>datastudio-client-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-1.19</artifactId>
+                <artifactId>datastudio-client-1.19</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.14</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.14</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.15</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.15</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.16</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.16</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.17</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.17</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.18</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-catalog-mysql-1.19</artifactId>
+                <artifactId>datastudio-catalog-mysql-1.19</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-connector-jdbc-1.14</artifactId>
+                <artifactId>datastudio-connector-jdbc-1.14</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-function</artifactId>
+                <artifactId>datastudio-function</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-common</artifactId>
+                <artifactId>datastudio-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-paimon</artifactId>
+                <artifactId>datastudio-metadata-paimon</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-base</artifactId>
+                <artifactId>datastudio-metadata-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-mysql</artifactId>
+                <artifactId>datastudio-metadata-mysql</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-oracle</artifactId>
+                <artifactId>datastudio-metadata-oracle</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-sqlserver</artifactId>
+                <artifactId>datastudio-metadata-sqlserver</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-postgresql</artifactId>
+                <artifactId>datastudio-metadata-postgresql</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-clickhouse</artifactId>
+                <artifactId>datastudio-metadata-clickhouse</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-doris</artifactId>
+                <artifactId>datastudio-metadata-doris</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-hive</artifactId>
+                <artifactId>datastudio-metadata-hive</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-phoenix</artifactId>
+                <artifactId>datastudio-metadata-phoenix</artifactId>
                 <version>${project.version}</version>
                 <exclusions>
                     <exclusion>
@@ -539,107 +539,107 @@
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-starrocks</artifactId>
+                <artifactId>datastudio-metadata-starrocks</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-metadata-presto</artifactId>
+                <artifactId>datastudio-metadata-presto</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-gateway</artifactId>
+                <artifactId>datastudio-gateway</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-client-hadoop</artifactId>
+                <artifactId>datastudio-client-hadoop</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-base</artifactId>
+                <artifactId>datastudio-alert-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-dingtalk</artifactId>
+                <artifactId>datastudio-alert-dingtalk</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-wechat</artifactId>
+                <artifactId>datastudio-alert-wechat</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-feishu</artifactId>
+                <artifactId>datastudio-alert-feishu</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-sms</artifactId>
+                <artifactId>datastudio-alert-sms</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-email</artifactId>
+                <artifactId>datastudio-alert-email</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-alert-http</artifactId>
+                <artifactId>datastudio-alert-http</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-daemon</artifactId>
+                <artifactId>datastudio-daemon</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-app-base</artifactId>
+                <artifactId>datastudio-app-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.14</artifactId>
+                <artifactId>datastudio-flink-1.14</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.15</artifactId>
+                <artifactId>datastudio-flink-1.15</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.16</artifactId>
+                <artifactId>datastudio-flink-1.16</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.17</artifactId>
+                <artifactId>datastudio-flink-1.17</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.18</artifactId>
+                <artifactId>datastudio-flink-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-flink-1.19</artifactId>
+                <artifactId>datastudio-flink-1.19</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-cdc-core</artifactId>
+                <artifactId>datastudio-cdc-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-cdc-plus</artifactId>
+                <artifactId>datastudio-cdc-plus</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -675,7 +675,7 @@
             </dependency>
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>dinky-scheduler</artifactId>
+                <artifactId>datastudio-scheduler</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -862,9 +862,9 @@
                     <typescript>
                         <includes>
                             <!-- You have to set the target manually -->
-                            <include>dinky-web/src/**/*.ts</include>
-                            <include>dinky-web/src/**/*.tsx</include>
-                            <include>dinky-web/src/**/*.js</include>
+                            <include>datastudio-web/src/**/*.ts</include>
+                            <include>datastudio-web/src/**/*.tsx</include>
+                            <include>datastudio-web/src/**/*.js</include>
                         </includes>
                         <licenseHeader>
                             <file>style/license_header</file>
@@ -1022,31 +1022,6 @@
             </activation>
             <properties>
                 <scope.runtime>provided</scope.runtime>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>flink-1.14</id>
-            <properties>
-                <dinky.flink.version>1.14</dinky.flink.version>
-                <flink.version>1.14.6</flink.version>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>flink-1.15</id>
-            <properties>
-                <dinky.flink.version>1.15</dinky.flink.version>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>flink-1.16</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <dinky.flink.version>1.16</dinky.flink.version>
             </properties>
         </profile>
 

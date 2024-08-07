@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.dinky</groupId>
+        <artifactId>datastudio</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>datastudio-app</artifactId>
+    <packaging>pom</packaging>
+    <name>DataStudio : App</name>
+
+    <modules>
+        <module>datastudio-app-base</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>flink-single-version</id>
+            <modules>
+                <module>datastudio-app-${dinky.flink.version}</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>flink-all</id>
+            <modules>
+                <module>datastudio-app-1.14</module>
+                <module>datastudio-app-1.15</module>
+                <module>datastudio-app-1.16</module>
+                <module>datastudio-app-1.17</module>
+                <module>datastudio-app-1.18</module>
+                <module>datastudio-app-1.19</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>web</id>
+            <modules>
+                <module>../datastudio-web</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

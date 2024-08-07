@@ -18,7 +18,7 @@ title: Docker 部署
 ```shell
 docker run --restart=always -p 8888:8888 \
   --name dinky \
-  dinky dinkydocker/dinky-standalone-server:1.1.0-flink1.17
+  dinky dinkydocker/datastudio-standalone-server:1.1.0-flink1.17
 
 ```
 使用 外部mysql数据库
@@ -31,7 +31,7 @@ docker run --restart=always -p 8888:8888 \
   -e MYSQL_USERNAME=dinky \
   -e MYSQL_PASSWORD=dinky \
   -v /opt/lib:/opt/dinky/customJar/ \ 
-  dinky dinkydocker/dinky-standalone-server:1.1.0-flink1.17
+  dinky dinkydocker/datastudio-standalone-server:1.1.0-flink1.17
 
 ```
 :::tip 说明
@@ -49,7 +49,7 @@ docker run --restart=always -p 8888:8888 \
   -e POSTGRES_USERNAME=dinky \
   -e POSTGRES_PASSWORD=dinky \
   -v /opt/lib:/opt/dinky/customJar/ \ 
-  dinky dinkydocker/dinky-standalone-server:1.1.0-flink1.17
+  dinky dinkydocker/datastudio-standalone-server:1.1.0-flink1.17
 ```
 ---
 ### 使用docker-compose 

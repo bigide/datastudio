@@ -52,7 +52,7 @@ docusaurus write-translations
 
 ## 如何提交一个  PR
 
-确保您有提交问题以跟踪 PR：https://github.com/DataLinkDC/dinky-website/issues
+确保您有提交问题以跟踪 PR：https://github.com/DataLinkDC/datastudio-website/issues
 
 - 不要使用 `git add .` 提交所有更改；
 - 只需推送您更改的文件，例如：

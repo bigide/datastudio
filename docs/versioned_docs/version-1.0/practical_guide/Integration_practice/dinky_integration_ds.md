@@ -41,11 +41,11 @@ docker run --name dolphinscheduler-standalone-server -p 12345:12345 -p 25333:253
 
 ### 启动 Dinky
 
-> 假设部署在: /opt/dinky-1.0.0 目录下
+> 假设部署在: /opt/datastudio-1.0.0 目录下
 
 ```bash
 
-cd /opt/dinky-1.0.0
+cd /opt/datastudio-1.0.0
 
 ./auto.sh start 1.16
 ```

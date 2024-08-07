@@ -212,7 +212,7 @@ Q2: 为什么 Maven Profile 切换了不生效呢?? 提交任务时还是报各�
 
 Q3: 我在 IDEA 中启动 Dinky 后, 前端页面访问不了, 报错找不到页面??????
 
-> A3-1: 可以在执行 Install 阶段勾选 `web` Profile,不然 dinky-admin/src/main/resources/ 下没有静态资源文件目录 `static`.
+> A3-1: 可以在执行 Install 阶段勾选 `web` Profile,不然 datastudio-admin/src/main/resources/ 下没有静态资源文件目录 `static`.
 
 > A3-2: 可以单独启动前端,参考 [本地调试-启动前端](developer_guide/local_debug#启动前端) 部分
 
@@ -222,7 +222,7 @@ Q4: 为什么在 IDEA 中启动 Dinky 后，Profile 也加载了,我用到了一
 
 > A4-1: Dinky 只加载了 Dinky 在开发中过程中用到的相关 Flink 依赖以及 Flink 的基本环境依赖.如报此类错误,请检查你的 pom.xml 文件,是否包含了 connector 所依赖的 jar 包
 
-> A4-2: 如上述问题未解决,请检查你的 `dinky-flink` 模块下的与你Flink 版本一致的 `pom.xml` 文件,是否包含了 connector 所依赖的 jar 包
+> A4-2: 如上述问题未解决,请检查你的 `datastudio-flink` 模块下的与你Flink 版本一致的 `pom.xml` 文件,是否包含了 connector 所依赖的 jar 包
 
 ## SQL开发FAQ
 Q1：ADD JAR语法如何支持s3路径？

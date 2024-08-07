@@ -11,7 +11,7 @@ title: 常规部署
 
 Dinky 采用 mysql 作为后端的存储库，mysql 支持 5.7+。这里假设你已经安装了 mysql 。首先需要创建 Dinky 的后端数据库，这里以配置文件中默认库创建。
 
-在 Dinky 根目录 sql 文件夹下分别放置了 dinky-mysql.sql 、 upgrade/${version}_schema/mysql/ddl 和 dml。如果第一次部署，可以直接将 sql/dinky-mysql.sql 文件在 dinky 数据库下执行。（如果之前已经部署，那 upgrade 目录下存放了各版本的升级 sql ，根据版本号按需执行即可）
+在 Dinky 根目录 sql 文件夹下分别放置了 datastudio-mysql.sql 、 upgrade/${version}_schema/mysql/ddl 和 dml。如果第一次部署，可以直接将 sql/datastudio-mysql.sql 文件在 dinky 数据库下执行。（如果之前已经部署，那 upgrade 目录下存放了各版本的升级 sql ，根据版本号按需执行即可）
 
 <Tabs groupId="operating-systems">
 <TabItem value="mysql5" label="mysql-5.x" default>
@@ -60,7 +60,7 @@ flush privileges;
 #首先登录 mysql
 mysql -h fdw1  -udinky -pdinky
 mysql> use dinky;
-mysql> source /opt/dinky/sql/dinky-mysql.sql
+mysql> source /opt/dinky/sql/datastudio-mysql.sql
 ```
 
 
@@ -82,8 +82,8 @@ import TabItem from '@theme/TabItem';
 ** 解压到指定目录 **
 
 ```shell
-tar -zxf dinky-release-${flink.version}-${dinky.version}.tar.gz
-mv dinky-release-${flink.version}-${dinky.version} dinky
+tar -zxf datastudio-release-${flink.version}-${dinky.version}.tar.gz
+mv datastudio-release-${flink.version}-${dinky.version} dinky
 cd dinky
 ```
 
@@ -131,7 +131,7 @@ Dinky 需要具备内置的 Flink 环境，该 Flink 环境的实现需要用户
 :::warning 注意事项
 1. Dinky 并没有内置的 mysql/postgres 数据库驱动，需要用户自己上传 mysql-connector-java-xxx.jar/postgresql-xxx.jar 等jdbc 驱动到 `lib 下`或者`extends 下`
 2. Dinky 当前版本的 yarn 的 per-job 与 application 执行模式依赖 flink-shaded-hadoop ，需要额外添加 flink-shaded-hadoop-uber 包，如果您使用的是`flink-shaded-hadoop-uber-3`请手动删除该包内部的 javax.servlet 等冲突内容。
-当然如果你的 Hadoop 为 3+ 也可以自行编译对于版本的 dinky-client-hadoop.jar 以替代 uber 包，
+当然如果你的 Hadoop 为 3+ 也可以自行编译对于版本的 datastudio-client-hadoop.jar 以替代 uber 包，
 3. Dinky所有监控相关功能目前强依赖hadoop，即使你不需要任何hadoop功能，也需要上传flink-shaded-hadoop-uber，否则会导致监控功能无法正常使用
 :::
 
@@ -157,42 +157,42 @@ https://mvnrepository.com/artifact/org.apache.flink/flink-shaded-hadoop-3-uber?r
 │   ├── application-pgsql.yml -- pgsql 配置文件
 │   ├── DinkyFlinkDockerfile -- k8s 集群配置自动构建镜像的Dockerfile
 │   └── log4j2.xml -- 日志配置
-├── dinky-loader
+├── datastudio-loader
 │   ├── ExpressionVariableClass -- 全局变量动态加载的表达式扫描配置文件
 │   └── FlinkConfClass -- 全局变量动态加载 Flink 配置的扫描配置文件
 ├── extends
 │   ├── flink1.14  -- 适配 Flink1.14.x
 │   │   └── dinky
-│   │       ├── dinky-catalog-mysql-1.14-${VERSION}.jar -- dinky 的 catalog 实现
-│   │       ├── dinky-client-1.14-${VERSION}.jar
-│   │       └── dinky-connector-jdbc-1.14-${VERSION}.jar -- dinky 的 jdbc 连接器增强实现
+│   │       ├── datastudio-catalog-mysql-1.14-${VERSION}.jar -- dinky 的 catalog 实现
+│   │       ├── datastudio-client-1.14-${VERSION}.jar
+│   │       └── datastudio-connector-jdbc-1.14-${VERSION}.jar -- dinky 的 jdbc 连接器增强实现
 │   ├── flink1.15  -- 适配 Flink1.15.x
 │   │   └── dinky
-│   │       ├── dinky-catalog-mysql-1.15-${VERSION}.jar -- dinky 的 catalog 实现
-│   │       └── dinky-client-1.15-${VERSION}.jar
+│   │       ├── datastudio-catalog-mysql-1.15-${VERSION}.jar -- dinky 的 catalog 实现
+│   │       └── datastudio-client-1.15-${VERSION}.jar
 │   ├── flink1.16  -- 适配 Flink1.16.x
 │   │   └── dinky
-│   │       ├── dinky-catalog-mysql-1.16-${VERSION}.jar -- dinky 的 catalog 实现
-│   │       └── dinky-client-1.16-${VERSION}.jar
+│   │       ├── datastudio-catalog-mysql-1.16-${VERSION}.jar -- dinky 的 catalog 实现
+│   │       └── datastudio-client-1.16-${VERSION}.jar
 │   ├── flink1.17  -- 适配 Flink1.17.x
 │   │   └── dinky
-│   │       ├── dinky-catalog-mysql-1.17-${VERSION}.jar -- dinky 的 catalog 实现
-│   │       └── dinky-client-1.17-${VERSION}.jar
+│   │       ├── datastudio-catalog-mysql-1.17-${VERSION}.jar -- dinky 的 catalog 实现
+│   │       └── datastudio-client-1.17-${VERSION}.jar
 │   └── flink1.18  -- 适配 Flink1.18.x
 │   │   └── dinky
-│   │       ├── dinky-catalog-mysql-1.18-${VERSION}.jar -- dinky 的 catalog 实现
-│   │       └── dinky-client-1.18-${VERSION}.jar
+│   │       ├── datastudio-catalog-mysql-1.18-${VERSION}.jar -- dinky 的 catalog 实现
+│   │       └── datastudio-client-1.18-${VERSION}.jar
 ├── jar
-│   ├── dinky-app-1.14-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.14.x application
-│   ├── dinky-app-1.15-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.15.x application
-│   ├── dinky-app-1.16-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.16.x application
-│   ├── dinky-app-1.17-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.17.x application
-│   └── dinky-app-1.18-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.18.x application
+│   ├── datastudio-app-1.14-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.14.x application
+│   ├── datastudio-app-1.15-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.15.x application
+│   ├── datastudio-app-1.16-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.16.x application
+│   ├── datastudio-app-1.17-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.17.x application
+│   └── datastudio-app-1.18-${VERSION}-jar-with-dependencies.jar -- 适配 Flink1.18.x application
 ├── lib
 │   └── ... -- Dinky 的内部依赖
 └── sql
-    ├── dinky-mysql.sql -- Mysql 首次初始化脚本
-    ├── dinky-pg.sql -- PGSql 首次初始化脚本
+    ├── datastudio-mysql.sql -- Mysql 首次初始化脚本
+    ├── datastudio-pg.sql -- PGSql 首次初始化脚本
     └── upgrade  -- 各个版本的升级 SQL
 ```
 对应 `Flink` 版本的依赖，放在Dinky 安装目录下 extends/flink${FLINK_VERSION} 下，例如：

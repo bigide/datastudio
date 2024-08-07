@@ -108,7 +108,7 @@ SHOW FRAGMENT var1;
 
 :::warning 注意
 
-在 `1.0.0` 之前, Dinky 提供了类似 `${_CURRENT_DATE_}` `${_CURRENT_TIMESTAMP_}` 的变量,但是此种方式比较受限,自由度不高,基于以上痛点 Dinky-1.0.0 重构了此功能,改为提供`表达式变量`功能,并且不与之前的 `${_CURRENT_DATE_}` `${_CURRENT_TIMESTAMP_}` 变量兼容, 请知悉!
+在 `1.0.0` 之前, Dinky 提供了类似 `${_CURRENT_DATE_}` `${_CURRENT_TIMESTAMP_}` 的变量,但是此种方式比较受限,自由度不高,基于以上痛点 datastudio-1.0.0 重构了此功能,改为提供`表达式变量`功能,并且不与之前的 `${_CURRENT_DATE_}` `${_CURRENT_TIMESTAMP_}` 变量兼容, 请知悉!
 
 如您升级到 `1.0.0` 及以上版本, 请修改引用 `${_CURRENT_DATE_}` `${_CURRENT_TIMESTAMP_}` 变量的相关作业
 
