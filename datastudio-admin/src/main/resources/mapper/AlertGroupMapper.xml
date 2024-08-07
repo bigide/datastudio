@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_alert_group a
+        studio_alert_group a
         <where>
             1=1
             <if test='param.name!=null and param.name!=""'>

@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_alert_history a
+        studio_alert_history a
         <where>
             1=1
             <if test='param.jobInstanceId!=null and param.jobInstanceId!=""'>

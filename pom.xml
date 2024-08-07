@@ -646,12 +646,12 @@
                         <target>${target.java.version}</target>
                         <testSource>${target.java.version}</testSource>
                         <testTarget>${target.java.version}</testTarget>
-<!--                        <compilerArgs combine.children="append">-->
-<!--                            <arg>&#45;&#45;add-exports=java.base/sun.net.util=ALL-UNNAMED</arg>-->
-<!--                            <arg>&#45;&#45;add-exports=java.management/sun.management=ALL-UNNAMED</arg>-->
-<!--                            <arg>&#45;&#45;add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED</arg>-->
-<!--                            <arg>&#45;&#45;add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED</arg>-->
-<!--                        </compilerArgs>-->
+                        <compilerArgs combine.children="append">
+                            <arg>--add-exports=java.base/sun.net.util=ALL-UNNAMED</arg>
+                            <arg>--add-exports=java.management/sun.management=ALL-UNNAMED</arg>
+                            <arg>--add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED</arg>
+                            <arg>--add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED</arg>
+                        </compilerArgs>
                     </configuration>
                 </plugin>
                 <plugin>

@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_sys_config a
+        studio_sys_config a
         <where>
             1=1
             <if test='param.name!=null and param.name!=""'>

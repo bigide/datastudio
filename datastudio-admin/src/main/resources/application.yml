@@ -19,7 +19,6 @@ spring:
     active: dev
     include:
       - jmx
-      - flyway
   lifecycle:
     timeout-per-shutdown-phase: 30s
 

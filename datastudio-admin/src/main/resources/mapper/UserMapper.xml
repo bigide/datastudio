@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_user a
+        studio_user a
         <where>
             1=1
             <if test='param.username!=null and param.username!=""'>
@@ -36,9 +36,9 @@
     <select id="queryAdminUserByTenant" resultType="java.lang.Integer">
         select
          count(*)
-        from dinky_user_tenant a
-        join dinky_user du on a.user_id = du.id
-        join dinky_tenant c on a.tenant_id = c.id
+        from studio_user_tenant a
+        join studio_user du on a.user_id = du.id
+        join studio_tenant c on a.tenant_id = c.id
         <where>
             1=1 and du.tenant_admin_flag = 1
             <if test='tenantId!=null and tenantId!=""'>
@@ -49,7 +49,7 @@
 
 <!--    recoveryUser -->
     <update id="recoveryUser" parameterType="java.lang.Integer" >
-        update dinky_user set is_delete = 0 where id = #{id}
+        update studio_user set is_delete = 0 where id = #{id}
     </update>
 
 </mapper>

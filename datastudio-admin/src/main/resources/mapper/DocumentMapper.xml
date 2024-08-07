@@ -28,7 +28,7 @@
         select
         a.*
         from
-        dinky_flink_document a
+        studio_flink_document a
         <where>
             1=1
             <if test='param.name!=null and param.name!=""'>

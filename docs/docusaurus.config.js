@@ -323,7 +323,6 @@ const config = {
     ],
     scripts: [
         // 统计 pv
-        {src: 'https://hm.baidu.com/hm.js?7f2b5e6f354b8ae1cdec43ba108936f7', async: true},
         {src: 'https://cdn.wwads.cn/js/makemoney.js', async: true},
     ]
 };

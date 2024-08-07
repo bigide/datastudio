@@ -8,7 +8,7 @@
         select
         <include refid="baseSql"/>
         from
-        dinky_user_role
+        studio_user_role
         <where>
             1=1
             <if test='param.userId!=null and param.userId!=""'>
@@ -30,12 +30,12 @@
         select
             <include refid="baseSql"/>
         from
-        dinky_user_role
+        studio_user_role
         where user_id =  #{userId}
     </select>
 
     <delete id="deleteBathRelation" parameterType="java.util.List">
-        delete from dinky_user_role
+        delete from studio_user_role
          where (user_id,role_id) in
       <foreach item="item" index="index" collection="userRoleList" open="(" separator="," close=")">
         (#{item.userId},#{item.roleId})
@@ -43,7 +43,7 @@
     </delete>
 
     <delete id="deleteByRoleIds" parameterType="java.util.List">
-        DELETE FROM dinky_user_role
+        DELETE FROM studio_user_role
         WHERE role_id IN
         <foreach collection="roleIds" item="item" open="(" separator="," close=")">
             ${item}
@@ -61,8 +61,8 @@
                    ,b.create_time
                    ,b.update_time
         from
-            dinky_user_role a
-                inner join dinky_role b on b.id = a.role_id
+            studio_user_role a
+                inner join studio_role b on b.id = a.role_id
         where a.user_id =  #{userId}
           and b.is_delete = 0
     </select>

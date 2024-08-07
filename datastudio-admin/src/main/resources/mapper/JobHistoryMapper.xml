@@ -4,7 +4,7 @@
 
     <select id="getByIdWithoutTenant" resultType="org.dinky.data.model.job.JobHistory">
         select *
-        from dinky_job_history
+        from studio_job_history
         where id = #{id}
         limit 1
     </select>
@@ -13,7 +13,7 @@
         select
         a.*
         from
-        dinky_job_history a
+        studio_job_history a
         <where>
             1=1
             <if test='param.id!=null and param.id!=""'>

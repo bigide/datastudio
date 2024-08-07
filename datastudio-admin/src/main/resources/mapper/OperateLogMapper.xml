@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_sys_operate_log a
+        studio_sys_operate_log a
         <where>
             1=1
             <if test='param.userId!=null and param.userId!=""'>

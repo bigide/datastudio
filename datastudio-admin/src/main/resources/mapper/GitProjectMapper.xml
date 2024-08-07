@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_git_project a
+        studio_git_project a
         <where>
             1=1
             <if test='param.name!=null and param.name!=""'>

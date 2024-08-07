@@ -23,7 +23,7 @@
         select id, name, parent_id, order_num,
                path, component, type, display,
             ifnull(perms,'') as perms, icon, create_time, update_time
-        from dinky_sys_menu
+        from studio_sys_menu
     </sql>
 
     <select id="listAllMenus" resultMap="DinkySysMenuResult">
@@ -46,7 +46,7 @@
 
     <select id="listMenus4SuperAdmin" resultMap="DinkySysMenuResult">
         select distinct m.id, m.parent_id, m.`name`, m.path, m.component, m.display, ifnull(m.perms,'') as perms, m.type, m.icon, m.order_num, m.create_time
-        from dinky_sys_menu m
+        from studio_sys_menu m
         where m.type in ('0', '1')
         order by m.parent_id, m.order_num
     </select>
@@ -54,10 +54,10 @@
     <select id="selectMenuListByUserId" parameterType="org.dinky.data.model.rbac.Menu" resultMap="DinkySysMenuResult">
         select distinct m.id, m.parent_id, m.`name`, m.path, m.component, m.display, ifnull(m.perms,'') as perms,
         m.type, m.icon, m.order_num, m.create_time
-        from dinky_sys_menu m
-        left join dinky_sys_role_menu rm on m.id = rm.menu_id
-        left join dinky_user_role ur on rm.role_id = ur.role_id
-        left join dinky_role ro on ur.role_id = ro.role_id
+        from studio_sys_menu m
+        left join studio_sys_role_menu rm on m.id = rm.menu_id
+        left join studio_user_role ur on rm.role_id = ur.role_id
+        left join studio_role ro on ur.role_id = ro.role_id
         where ur.user_id = #{params.userId}
         <if test="name != null and name != ''">
             AND m.`name` like concat('%', #{name}, '%')
@@ -70,10 +70,10 @@
 
     <select id="selectMenuTreeByUserId" resultMap="DinkySysMenuResult">
         select distinct m.id, m.parent_id, m.`name`, m.path, m.component, m.display, ifnull(m.perms,'') as perms, m.type, m.icon, m.order_num, m.create_time
-        from dinky_sys_menu m
-                 left join dinky_sys_role_menu rm on m.id = rm.menu_id
-                 left join dinky_user_role ur on rm.role_id = ur.role_id
-                 left join dinky_role ro on ur.role_id = ro.role_id
+        from studio_sys_menu m
+                 left join studio_sys_role_menu rm on m.id = rm.menu_id
+                 left join studio_user_role ur on rm.role_id = ur.role_id
+                 left join studio_role ro on ur.role_id = ro.role_id
                  left join sys_user u on ur.user_id = u.user_id
         where u.user_id = #{userId}
           and m.type in ('0', '1')
@@ -83,33 +83,33 @@
 
     <select id="selectMenuListByRoleId" parameterType="Long" resultType="Integer">
         select m.id, m.parent_id
-        from dinky_sys_menu m
-                 left join dinky_sys_role_menu rm on m.id = rm.menu_id
+        from studio_sys_menu m
+                 left join studio_sys_role_menu rm on m.id = rm.menu_id
         where rm.role_id = #{roleId}
-          and m.id not in (select m.parent_id from dinky_sys_menu m inner join dinky_sys_role_menu rm on m.id = rm.menu_id and rm.role_id = #{roleId})
+          and m.id not in (select m.parent_id from studio_sys_menu m inner join studio_sys_role_menu rm on m.id = rm.menu_id and rm.role_id = #{roleId})
         order by m.parent_id, m.order_num
     </select>
 
     <select id="selectMenuPerms" resultType="String">
         select distinct m.perms
-        from dinky_sys_menu m
-                 left join dinky_sys_role_menu rm on m.id = rm.menu_id
-                 left join dinky_user_role ur on rm.role_id = ur.role_id
+        from studio_sys_menu m
+                 left join studio_sys_role_menu rm on m.id = rm.menu_id
+                 left join studio_user_role ur on rm.role_id = ur.role_id
     </select>
 
     <select id="selectMenuPermsByUserId" parameterType="Integer" resultType="String">
         select distinct m.perms
-        from dinky_sys_menu m
-                 left join dinky_sys_role_menu rm on m.id = rm.menu_id
-                 left join dinky_user_role ur on rm.role_id = ur.role_id
-                 left join dinky_role r on r.role_id = ur.role_id
+        from studio_sys_menu m
+                 left join studio_sys_role_menu rm on m.id = rm.menu_id
+                 left join studio_user_role ur on rm.role_id = ur.role_id
+                 left join studio_role r on r.role_id = ur.role_id
         where r.is_delete = 0 and ur.user_id = #{userId}
     </select>
 
 
 
     <select id="hasChildByMenuId" resultType="Integer">
-        select count(1) from dinky_sys_menu where parent_id = #{menuId} limit 1
+        select count(1) from studio_sys_menu where parent_id = #{menuId} limit 1
     </select>
 
     <select id="checkMenuNameUnique" parameterType="org.dinky.data.model.rbac.Menu" resultMap="DinkySysMenuResult">
@@ -119,8 +119,8 @@
 
     <select id="selectMenuPermsByRoleId" parameterType="Integer" resultType="String">
         select distinct m.perms
-        from dinky_sys_menu m
-                 left join dinky_sys_role_menu rm on m.id = rm.menu_id
+        from studio_sys_menu m
+                 left join studio_sys_role_menu rm on m.id = rm.menu_id
         where rm.role_id = #{roleId}
     </select>
 
@@ -128,7 +128,7 @@
         select
         a.*
         from
-        dinky_sys_menu a
+        studio_sys_menu a
         <where>
             1=1
             <if test='param.path!=null and param.path!=""'>

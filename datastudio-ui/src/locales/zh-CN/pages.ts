@@ -304,7 +304,7 @@ export default {
    *
    * */
 
-  'layouts.userLayout.title': 'Dinky 实时计算平台',
+  'layouts.userLayout.title': 'DataStudio',
   /**
    *
    * login

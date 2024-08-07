@@ -35,7 +35,7 @@ import lombok.SneakyThrows;
 @EnableTransactionManagement
 @SpringBootApplication(exclude = FreeMarkerAutoConfiguration.class)
 @EnableCaching
-public class Dinky {
+public class DataStudioApplication {
 
     static {
         System.setProperty("log4j2.isThreadContextMapInheritable", "true");
@@ -43,7 +43,7 @@ public class Dinky {
 
     @SneakyThrows
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(Dinky.class);
+        SpringApplication app = new SpringApplication(DataStudioApplication.class);
         app.run(args);
     }
 }

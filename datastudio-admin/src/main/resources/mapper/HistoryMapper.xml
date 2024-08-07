@@ -5,10 +5,10 @@
     <select id="selectForProTable" resultType="org.dinky.data.model.job.History">
         select
         a.*,
-        (select b.name FROM dinky_cluster b where b.id=a.cluster_id) as clusterName,
-        (select c.name FROM dinky_task c where c.id=a.task_id) as jobName
+        (select b.name FROM studio_cluster b where b.id=a.cluster_id) as clusterName,
+        (select c.name FROM studio_task c where c.id=a.task_id) as jobName
         from
-        dinky_history a
+        studio_history a
         <where>
             1=1 and a.task_id = #{param.taskId}
             <if test='param.jobId!=null and param.jobId!=""'>

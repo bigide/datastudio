@@ -118,7 +118,7 @@ const HeaderGraph = () => {
                 </div>
                 <div className="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
                     <h1 className="display-4 text-center text-md-left mb-3">
-                        <strong className="text-primary">Dinky<br/></strong>让Flink作业纵享丝滑
+                        <strong className="text-primary">DataStudio<br/></strong>让Flink作业纵享丝滑
                     </h1>
                     <p className="lead text-center text-md-left text-muted">
                         为 Apache Flink 深度定制的新一代实时计算平台，提供敏捷的 Flink SQL, Flink Jar
@@ -179,7 +179,7 @@ export default function Home() {
                         <div className="col-lg-6">
                             <h2 className=" mt-4">什么是Dinky？</h2>
                             <div className="mt-2">
-                                <p className="lead lh-180">Dinky 是一个开箱即用的一站式实时计算平台，以 Apache Flink 为基础，连接
+                                <p className="lead lh-180">DataStudio 是一个开箱即用的一站式数据开发平台，以 Apache Flink 为基础，连接
                                     OLAP 和数据湖等众多框架,致力于流批一体和湖仓一体的建设与实践。</p>
                             </div>
                         </div>

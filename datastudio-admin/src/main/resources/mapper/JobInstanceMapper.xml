@@ -4,7 +4,7 @@
 
     <select id="getByIdWithoutTenant" resultType="org.dinky.data.model.job.JobInstance">
         select *
-        from dinky_job_instance
+        from studio_job_instance
         where id = #{id}
         limit 1
     </select>
@@ -13,19 +13,19 @@
         select
         a.*,
         dh.type as type,
-        (select dc.name FROM dinky_cluster dc where dc.id=a.cluster_id) as clusterName,
+        (select dc.name FROM studio_cluster dc where dc.id=a.cluster_id) as clusterName,
         dt.first_level_owner,
         dt.second_level_owners
         from
-        dinky_job_instance a
+        studio_job_instance a
         <if test='!(param.isHistory!=null and param.isHistory==true)'>
             inner join (
-            select max(ji.id) as id from dinky_job_instance ji
+            select max(ji.id) as id from studio_job_instance ji
             group by ji.task_id
             ) snap on snap.id = a.id
         </if>
-        left join dinky_history dh on a.history_id = dh.id
-        left join dinky_task dt on a.task_id = dt.id
+        left join studio_history dh on a.history_id = dh.id
+        left join studio_task dt on a.task_id = dt.id
         <where>
             1=1
             <if test='param.status!=null and param.status!=""'>
@@ -66,10 +66,10 @@
     <select id="countStatus" resultType="org.dinky.data.model.home.JobInstanceCount">
         select a.status,
                count(1) as counts
-        from dinky_job_instance a
+        from studio_job_instance a
                  inner join (
             select max(ji.id) as id
-            from dinky_job_instance ji
+            from studio_job_instance ji
             group by ji.task_id
         ) snap on snap.id = a.id
         group by status
@@ -79,28 +79,28 @@
         select sum(case when b.batch then 1 else 0 end ) as batchJobCount,
                sum(case when b.batch then 0 else 1 end ) as streamingJobCount
         from (select batch_model as batch
-                 from (select max(ji.id) as id from dinky_job_instance ji group by ji.task_id) as a
-        left join dinky_job_instance dji on dji.id = a.id
-        left join dinky_history dh on dji.history_id = dh.id) b
+                 from (select max(ji.id) as id from studio_job_instance ji group by ji.task_id) as a
+        left join studio_job_instance dji on dji.id = a.id
+        left join studio_history dh on dji.history_id = dh.id) b
     </select>
 
     <select id="listJobInstanceActive" resultType="org.dinky.data.model.job.JobInstance">
         select *
-        from dinky_job_instance
+        from studio_job_instance
         where status not in ('FAILED', 'CANCELED', 'FINISHED', 'UNKNOWN')
         order by id desc
     </select>
 
     <select id="getJobInstanceByTaskId" resultType="org.dinky.data.model.job.JobInstance">
         select *
-        from dinky_job_instance
+        from studio_job_instance
         where task_id = #{id}
         order by id desc limit 1
     </select>
 
     <select id="getTenantByJobInstanceId" resultType="java.lang.Integer">
         select tenant_id
-        from dinky_job_instance
+        from studio_job_instance
         where id = #{id}
     </select>
 </mapper>

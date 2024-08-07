@@ -6,7 +6,7 @@
         select
         a.*
         from
-        dinky_savepoints a
+        studio_savepoints a
         <where>
             1=1
             <if test='param.taskId!=null'>
@@ -28,14 +28,14 @@
     </select>
 
     <select id="getLatestSavepointByTaskId" resultType="org.dinky.data.model.Savepoints">
-        SELECT * FROM dinky_savepoints
+        SELECT * FROM studio_savepoints
         WHERE task_id = #{id}
         ORDER BY create_time DESC
         LIMIT 1
     </select>
 
     <select id="getEarliestSavepointByTaskId" resultType="org.dinky.data.model.Savepoints">
-        SELECT * FROM dinky_savepoints
+        SELECT * FROM studio_savepoints
         WHERE task_id = #{id}
         ORDER BY create_time ASC
         LIMIT 1

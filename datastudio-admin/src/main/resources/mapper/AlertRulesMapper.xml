@@ -14,8 +14,8 @@
                dar.description,
                dat.name as template_name,
                dat.template_content
-        from dinky_alert_rules dar
-                 left join dinky_alert_template dat on dar.template_id = dat.id
+        from studio_alert_rules dar
+                 left join studio_alert_template dat on dar.template_id = dat.id
         where dar.enabled = 1
     </select>
 
@@ -24,7 +24,7 @@
         select
         a.*
         from
-        dinky_alert_rules a
+        studio_alert_rules a
         <where>
             <if test='param.name!=null and param.name!=""'>
                 and a.name like "%${param.name}%"
