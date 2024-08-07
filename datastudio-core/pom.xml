@@ -29,7 +29,7 @@
     <packaging>jar</packaging>
     <name>DataStudio : Core</name>
     <properties>
-        <hadoop.version>3.1.0</hadoop.version>
+        <hadoop.version>3.3.6</hadoop.version>
     </properties>
     <dependencies>
         <!--<dependency>
@@ -37,6 +37,28 @@
             <artifactId>groovy</artifactId>
             <version>3.0.9</version>
         </dependency>-->
+
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-client-1.18</artifactId>
+            <scope>${scope.runtime}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-catalog-mysql-1.18</artifactId>
+            <scope>${scope.runtime}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-flink-1.18</artifactId>
+            <scope>${scope.runtime}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-cdc-plus</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.dinky</groupId>
             <artifactId>datastudio-common</artifactId>
@@ -124,11 +146,7 @@
             <artifactId>datastudio-metadata-sqlserver</artifactId>
             <scope>${scope.runtime}</scope>
         </dependency>
-        <dependency>
-            <groupId>org.dinky</groupId>
-            <artifactId>datastudio-metadata-phoenix</artifactId>
-            <scope>${scope.runtime}</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.dinky</groupId>
             <artifactId>datastudio-metadata-starrocks</artifactId>
@@ -235,181 +253,4 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>flink-1.14</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-connector-jdbc-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-single-version</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-${dinky.flink.version}</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-${dinky.flink.version}</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-${dinky.flink.version}</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-all</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.17</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.17</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.17</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.18</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.18</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.18</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-client-1.19</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-catalog-mysql-1.19</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.19</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-
-        <profile>
-            <id>flink-1.15</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-cdc-plus</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-1.16</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-cdc-plus</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-1.17</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-cdc-plus</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-1.18</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-cdc-plus</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-1.19</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-cdc-plus</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
 </project>

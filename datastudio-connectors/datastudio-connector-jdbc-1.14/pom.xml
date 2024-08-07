@@ -37,11 +37,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.dinky</groupId>
-            <artifactId>datastudio-flink-1.14</artifactId>
-            <scope>${scope.runtime}</scope>
-        </dependency>
+
         <!-- Postgres dependencies -->
         <dependency>
             <groupId>org.postgresql</groupId>

@@ -34,26 +34,9 @@
     <modules>
         <module>datastudio-client-hadoop</module>
         <module>datastudio-client-base</module>
+        <module>datastudio-client-1.15</module>
+        <module>datastudio-client-1.18</module>
+        <module>datastudio-client-1.19</module>
     </modules>
-
-    <profiles>
-        <profile>
-            <id>flink-single-version</id>
-            <modules>
-                <module>datastudio-client-${dinky.flink.version}</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>flink-all</id>
-            <modules>
-                <module>datastudio-client-1.14</module>
-                <module>datastudio-client-1.15</module>
-                <module>datastudio-client-1.16</module>
-                <module>datastudio-client-1.17</module>
-                <module>datastudio-client-1.18</module>
-                <module>datastudio-client-1.19</module>
-            </modules>
-        </profile>
-    </profiles>
 
 </project>

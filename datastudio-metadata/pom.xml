@@ -38,7 +38,6 @@
         <module>datastudio-metadata-postgresql</module>
         <module>datastudio-metadata-sqlserver</module>
         <module>datastudio-metadata-doris</module>
-        <module>datastudio-metadata-phoenix</module>
         <module>datastudio-metadata-hive</module>
         <module>datastudio-metadata-starrocks</module>
         <module>datastudio-metadata-presto</module>

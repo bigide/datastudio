@@ -30,19 +30,7 @@
 
     <name>DataStudio : Connectors</name>
 
-    <profiles>
-        <profile>
-            <id>flink-1.14</id>
-            <modules>
-                <module>datastudio-connector-jdbc-1.14</module>
-            </modules>
-        </profile>
-
-        <profile>
-            <id>flink-all</id>
-            <modules>
-                <module>datastudio-connector-jdbc-1.14</module>
-            </modules>
-        </profile>
-    </profiles>
+    <modules>
+        <module>datastudio-connector-jdbc-1.14</module>
+    </modules>
 </project>

@@ -15,26 +15,12 @@
 
     <modules>
         <module>datastudio-app-base</module>
+        <module>datastudio-app-1.15</module>
+        <module>datastudio-app-1.18</module>
+        <module>datastudio-app-1.19</module>
     </modules>
 
     <profiles>
-        <profile>
-            <id>flink-single-version</id>
-            <modules>
-                <module>datastudio-app-${dinky.flink.version}</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>flink-all</id>
-            <modules>
-                <module>datastudio-app-1.14</module>
-                <module>datastudio-app-1.15</module>
-                <module>datastudio-app-1.16</module>
-                <module>datastudio-app-1.17</module>
-                <module>datastudio-app-1.18</module>
-                <module>datastudio-app-1.19</module>
-            </modules>
-        </profile>
 
         <profile>
             <id>web</id>

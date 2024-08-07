@@ -32,7 +32,7 @@
 
     <properties>
         <expand.scope>provided</expand.scope>
-        <postgresql.version>42.5.1</postgresql.version>
+        <postgresql.version>42.7.3</postgresql.version>
     </properties>
 
     <dependencies>
@@ -455,20 +455,6 @@
     </build>
 
     <profiles>
-        <profile>
-            <id>mac</id>
-            <activation>
-                <os>
-                    <family>mac</family>
-                </os>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>io.netty</groupId>
-                    <artifactId>netty-resolver-dns-native-macos</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
 
         <profile>
             <id>dev</id>

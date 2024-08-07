@@ -41,6 +41,12 @@
             <artifactId>datastudio-common</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-flink-1.18</artifactId>
+            <scope>${scope.runtime}</scope>
+        </dependency>
+
         <!-- test dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -120,51 +126,4 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>flink-single-version</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-${dinky.flink.version}</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>flink-all</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.14</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.15</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.16</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.17</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.18</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.dinky</groupId>
-                    <artifactId>datastudio-flink-1.19</artifactId>
-                    <scope>${scope.runtime}</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
 </project>

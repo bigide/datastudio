@@ -30,24 +30,10 @@
     <packaging>pom</packaging>
     <name>DataStudio : Catalog : Mysql</name>
 
-    <profiles>
-        <profile>
-            <id>flink-single-version</id>
-            <modules>
-                <module>datastudio-catalog-mysql-${dinky.flink.version}</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>flink-all</id>
-            <modules>
-                <module>datastudio-catalog-mysql-1.14</module>
-                <module>datastudio-catalog-mysql-1.15</module>
-                <module>datastudio-catalog-mysql-1.16</module>
-                <module>datastudio-catalog-mysql-1.17</module>
-                <module>datastudio-catalog-mysql-1.18</module>
-                <module>datastudio-catalog-mysql-1.19</module>
-            </modules>
-        </profile>
-    </profiles>
+    <modules>
+        <module>datastudio-catalog-mysql-1.15</module>
+        <module>datastudio-catalog-mysql-1.18</module>
+        <module>datastudio-catalog-mysql-1.19</module>
+    </modules>
 
 </project>

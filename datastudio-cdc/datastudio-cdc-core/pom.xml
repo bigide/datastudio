@@ -30,12 +30,12 @@
         </dependency>
         <dependency>
             <groupId>org.dinky</groupId>
-            <artifactId>datastudio-client-${dinky.flink.version}</artifactId>
+            <artifactId>datastudio-client-${datastudio.flink.version}</artifactId>
             <scope>${scope.runtime}</scope>
         </dependency>
         <dependency>
             <groupId>org.dinky</groupId>
-            <artifactId>datastudio-flink-${dinky.flink.version}</artifactId>
+            <artifactId>datastudio-flink-${datastudio.flink.version}</artifactId>
             <scope>${scope.runtime}</scope>
         </dependency>
         <!-- test dependencies -->

@@ -29,18 +29,7 @@
                 <module>datastudio-cdc-plus</module>
             </modules>
         </profile>
-        <profile>
-            <id>flink-1.16</id>
-            <modules>
-                <module>datastudio-cdc-plus</module>
-            </modules>
-        </profile>
-        <profile>
-            <id>flink-1.17</id>
-            <modules>
-                <module>datastudio-cdc-plus</module>
-            </modules>
-        </profile>
+
         <profile>
             <id>flink-1.18</id>
             <modules>
