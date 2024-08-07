@@ -34,9 +34,7 @@
     <modules>
         <module>datastudio-client-hadoop</module>
         <module>datastudio-client-base</module>
-        <module>datastudio-client-1.15</module>
         <module>datastudio-client-1.18</module>
-        <module>datastudio-client-1.19</module>
     </modules>
 
 </project>

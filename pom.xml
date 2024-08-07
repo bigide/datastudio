@@ -403,40 +403,10 @@
                 <artifactId>datastudio-client-base</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.14</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.15</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.16</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.17</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.18</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-client-1.19</artifactId>
-                <version>${project.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>datastudio-catalog-mysql-1.15</artifactId>
+                <artifactId>datastudio-client-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -445,11 +415,7 @@
                 <artifactId>datastudio-catalog-mysql-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-catalog-mysql-1.19</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.dinky</groupId>
                 <artifactId>datastudio-connector-jdbc-1.14</artifactId>
@@ -579,20 +545,10 @@
 
             <dependency>
                 <groupId>org.dinky</groupId>
-                <artifactId>datastudio-flink-1.15</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.dinky</groupId>
                 <artifactId>datastudio-flink-1.18</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.dinky</groupId>
-                <artifactId>datastudio-flink-1.19</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.dinky</groupId>
                 <artifactId>datastudio-cdc-core</artifactId>
@@ -968,20 +924,6 @@
             </activation>
             <properties>
                 <scope.runtime>provided</scope.runtime>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>flink-1.18</id>
-            <properties>
-                <flink.version>1.18</flink.version>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>flink-1.19</id>
-            <properties>
-                <flink.version>1.19</flink.version>
             </properties>
         </profile>
 

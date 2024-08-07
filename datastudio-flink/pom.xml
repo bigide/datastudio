@@ -29,9 +29,7 @@
     <name>DataStudio : Flink</name>
 
     <modules>
-        <module>datastudio-flink-1.15</module>
         <module>datastudio-flink-1.18</module>
-        <module>datastudio-flink-1.19</module>
     </modules>
 
 </project>

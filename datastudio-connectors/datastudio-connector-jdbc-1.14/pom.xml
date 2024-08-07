@@ -33,10 +33,16 @@
     <properties>
         <junit.version>4.12</junit.version>
         <otj-pg-embedded.version>0.13.3</otj-pg-embedded.version>
-        <postgres.version>42.2.10</postgres.version>
+        <postgres.version>42.7.3</postgres.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.dinky</groupId>
+            <artifactId>datastudio-flink-1.18</artifactId>
+        </dependency>
+
 
         <!-- Postgres dependencies -->
         <dependency>

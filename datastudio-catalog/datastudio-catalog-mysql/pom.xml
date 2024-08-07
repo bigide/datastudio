@@ -31,9 +31,7 @@
     <name>DataStudio : Catalog : Mysql</name>
 
     <modules>
-        <module>datastudio-catalog-mysql-1.15</module>
         <module>datastudio-catalog-mysql-1.18</module>
-        <module>datastudio-catalog-mysql-1.19</module>
     </modules>
 
 </project>

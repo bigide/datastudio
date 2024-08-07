@@ -15,9 +15,7 @@
 
     <modules>
         <module>datastudio-app-base</module>
-        <module>datastudio-app-1.15</module>
         <module>datastudio-app-1.18</module>
-        <module>datastudio-app-1.19</module>
     </modules>
 
     <profiles>

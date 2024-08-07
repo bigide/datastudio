@@ -1,1 +1,2 @@
 DataStudio 基于Dinky 开发
+保留flink1.18作为LTS版本
