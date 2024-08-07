@@ -55,7 +55,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 public class ClusterConfigurationServiceImpl extends SuperServiceImpl<ClusterConfigurationMapper, ClusterConfiguration>
         implements ClusterConfigurationService {
 
-    @Value("classpath:DinkyFlinkDockerfile")
+    @Value("classpath:DataStudioDockerfile")
     org.springframework.core.io.Resource dockerfileResource;
 
     @Autowired

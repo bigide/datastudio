@@ -1,6 +1,6 @@
 
 
-update dinky_sys_menu
+update studio_sys_menu
 set `path`='/registration/alert/rule',
     `component`='./RegCenter/Alert/AlertRule',
     `perms`='registration:alert:rule',

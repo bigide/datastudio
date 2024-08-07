@@ -13,7 +13,7 @@ Dinky 0.6.6 是一个优化修复的版本。
 
 :::warning 注意
 此版本有表结构变更 <br/>
-需要执行 **sql/upgrade/0.6.6_schema/mysql/dinky_ddl.sql** 文件
+需要执行 **sql/upgrade/0.6.6_schema/mysql/studio_ddl.sql** 文件
 :::
 
 ### 新功能

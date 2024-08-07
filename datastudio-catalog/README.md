@@ -22,7 +22,7 @@
 ```roomsql 
 create catalog mycatalog 
     with(
-        'type'='dinky_mysql_catalog'
+        'type'='studio_mysql_catalog'
         );
         
 use catalog mycatalog;

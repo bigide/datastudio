@@ -43,7 +43,7 @@ EXECUTE CDCSOURCE demo WITH (
 
 ```sql showLineNumbers
 
-EXECUTE CDCSOURCE dinky_paimon_test
+EXECUTE CDCSOURCE studio_paimon_test
 WITH
   (
     'connector' = 'mysql-cdc',

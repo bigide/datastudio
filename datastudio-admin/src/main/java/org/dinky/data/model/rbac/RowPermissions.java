@@ -40,7 +40,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_row_permissions")
+@TableName("studio_row_permissions")
 @ApiModel(value = "RowPermissions", description = "Row-Level Permissions Information")
 public class RowPermissions implements Serializable {
 

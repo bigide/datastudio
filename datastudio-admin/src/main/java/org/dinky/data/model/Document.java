@@ -35,7 +35,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_flink_document")
+@TableName("studio_flink_document")
 @ApiModel(value = "Document", description = "Document manage")
 public class Document extends SuperEntity<Document> {
 

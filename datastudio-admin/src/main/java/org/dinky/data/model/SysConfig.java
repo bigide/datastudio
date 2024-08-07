@@ -49,7 +49,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_sys_config")
+@TableName("studio_sys_config")
 @ApiModel(value = "SysConfig", description = "System Configuration Information")
 public class SysConfig extends Model<SysConfig> {
 

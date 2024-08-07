@@ -45,7 +45,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_task")
+@TableName("studio_task")
 @NoArgsConstructor
 @ApiModel(value = "Task", description = "Task Information")
 public class Task extends SuperEntity<Task> {

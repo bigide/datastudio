@@ -35,7 +35,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_udf_template")
+@TableName("studio_udf_template")
 @ApiModel(value = "UDFTemplate", description = "User-Defined Function Template")
 public class UDFTemplate extends SuperEntity<UDFTemplate> {
 

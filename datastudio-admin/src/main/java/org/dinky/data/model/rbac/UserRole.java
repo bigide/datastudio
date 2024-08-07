@@ -40,7 +40,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_user_role")
+@TableName("studio_user_role")
 @ApiModel(value = "UserRole", description = "User Role Relationship")
 public class UserRole implements Serializable {
     private static final long serialVersionUID = -6123386787317880485L;

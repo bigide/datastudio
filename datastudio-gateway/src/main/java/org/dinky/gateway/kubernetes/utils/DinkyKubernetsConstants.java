@@ -21,6 +21,6 @@ package org.dinky.gateway.kubernetes.utils;
 
 /** Constants for kubernetes. */
 public class DinkyKubernetsConstants {
-    public static final String DINKY_CONF_VOLUME = "datastudio-config-volume";
-    public static final String DINKY_CONF_VOLUME_PERFIX = "datastudio-config-";
+    public static final String STUDIO_CONF_VOLUME = "datastudio-config-volume";
+    public static final String STUDIO_CONF_VOLUME_PERFIX = "datastudio-config-";
 }

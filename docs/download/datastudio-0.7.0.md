@@ -15,7 +15,7 @@ Dinky 0.7.0 是一个新功能版本。
 :::warning 注意
 该版本多租户功能已开放 <br/>
 此版本有表结构变更 <br/>
-需要按需执行 **sql/upgrade/0.7.0_schema/mysql/dinky_ddl.sql** 和 **sql/upgrade/0.7.0_schema/mysql/dinky_dml.sql**
+需要按需执行 **sql/upgrade/0.7.0_schema/mysql/studio_ddl.sql** 和 **sql/upgrade/0.7.0_schema/mysql/studio_dml.sql**
 :::
 
 ### 新功能

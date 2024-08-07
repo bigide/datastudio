@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-id: dinky_integration_flink
+id: studio_integration_flink
 title: Dinky 与 Flink 集成
 ---
 

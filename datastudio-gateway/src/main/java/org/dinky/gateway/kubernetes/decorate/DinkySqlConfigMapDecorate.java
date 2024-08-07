@@ -67,8 +67,8 @@ public class DinkySqlConfigMapDecorate {
 
         final Container mountedMainContainer = new ContainerBuilder(mainContainer)
                 .addNewVolumeMount()
-                .withName(DinkyKubernetsConstants.DINKY_CONF_VOLUME)
-                .withMountPath(configuration.get(CustomerConfigureOptions.DINKY_CONF_DIR))
+                .withName(DinkyKubernetsConstants.STUDIO_CONF_VOLUME)
+                .withMountPath(configuration.get(CustomerConfigureOptions.STUDIO_CONF_DIR))
                 .endVolumeMount()
                 .build();
 
@@ -113,7 +113,7 @@ public class DinkySqlConfigMapDecorate {
                 .build());
 
         final Volume sqlConfigVolume = new VolumeBuilder()
-                .withName(DinkyKubernetsConstants.DINKY_CONF_VOLUME)
+                .withName(DinkyKubernetsConstants.STUDIO_CONF_VOLUME)
                 .withNewConfigMap()
                 .withName(dinkyConfMapName())
                 .withItems(keyToPaths)
@@ -152,6 +152,6 @@ public class DinkySqlConfigMapDecorate {
     }
 
     private String dinkyConfMapName() {
-        return DinkyKubernetsConstants.DINKY_CONF_VOLUME_PERFIX + configuration.get(KubernetesConfigOptions.CLUSTER_ID);
+        return DinkyKubernetsConstants.STUDIO_CONF_VOLUME_PERFIX + configuration.get(KubernetesConfigOptions.CLUSTER_ID);
     }
 }

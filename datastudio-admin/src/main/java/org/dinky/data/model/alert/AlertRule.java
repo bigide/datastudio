@@ -38,7 +38,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Data
-@TableName("dinky_alert_rules")
+@TableName("studio_alert_rules")
 @ApiModel(value = "AlertRule", description = "AlertRule")
 public class AlertRule extends SuperEntity<AlertRule> {
 

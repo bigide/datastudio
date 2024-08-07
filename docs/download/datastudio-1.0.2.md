@@ -17,7 +17,7 @@ title: 1.0.2 release
 ### 升级说明
 
 :::warning 提示
-- 1.0.2 是一个 BUG 修复版本,有表结构/数据变更,请执行 DINKY_HOME/sql/upgrade/1.0.2_schema/数据源类型/dinky_dml.sql
+- 1.0.2 是一个 BUG 修复版本,有表结构/数据变更,请执行 DINKY_HOME/sql/upgrade/1.0.2_schema/数据源类型/studio_dml.sql
 - 关于 SCALA 版本: 发版使用 Scala-2.12 , 如你的环境必须使用 Scala-2.11, 请自行编译,请参考 [编译部署](../docs/next/deploy_guide/compile_deploy) , 将 profile 的 scala-2.12 改为 scala-2.11
 :::
 

@@ -73,7 +73,7 @@ public enum SqliteUtil {
         }
         lastRecyle.set(now);
         try {
-            String sql = "DELETE FROM dinky_metrics WHERE heart_time <= datetime('now', '-7 days')";
+            String sql = "DELETE FROM studio_metrics WHERE heart_time <= datetime('now', '-7 days')";
             executeSql(sql);
             executeSql("VACUUM");
         } catch (SQLException e) {

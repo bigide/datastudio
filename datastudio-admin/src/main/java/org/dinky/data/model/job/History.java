@@ -46,7 +46,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_history")
+@TableName("studio_history")
 @ApiModel(value = "History", description = "History Information")
 public class History implements Serializable {
 

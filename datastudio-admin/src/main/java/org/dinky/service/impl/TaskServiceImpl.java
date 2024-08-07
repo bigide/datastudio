@@ -238,7 +238,7 @@ public class TaskServiceImpl extends SuperServiceImpl<TaskMapper, Task> implemen
             FlinkClusterConfig flinkClusterCfg =
                     clusterCfgService.getFlinkClusterCfg(config.getClusterConfigurationId());
             flinkClusterCfg.getAppConfig().setUserJarParas(buildParams(config.getTaskId()));
-            flinkClusterCfg.getAppConfig().setUserJarMainAppClass(CommonConstant.DINKY_APP_MAIN_CLASS);
+            flinkClusterCfg.getAppConfig().setUserJarMainAppClass(CommonConstant.STUDIO_APP_MAIN_CLASS);
             config.buildGatewayConfig(flinkClusterCfg);
             config.setClusterId(null);
         } else if (GatewayType.LOCAL.equalsValue(task.getType())) {
@@ -268,7 +268,7 @@ public class TaskServiceImpl extends SuperServiceImpl<TaskMapper, Task> implemen
             FlinkClusterConfig flinkClusterCfg =
                     clusterCfgService.getFlinkClusterCfg(config.getClusterConfigurationId());
             flinkClusterCfg.getAppConfig().setUserJarParas(buildParams(config.getTaskId()));
-            flinkClusterCfg.getAppConfig().setUserJarMainAppClass(CommonConstant.DINKY_APP_MAIN_CLASS);
+            flinkClusterCfg.getAppConfig().setUserJarMainAppClass(CommonConstant.STUDIO_APP_MAIN_CLASS);
             config.buildGatewayConfig(flinkClusterCfg);
             JobInstance jobInstance = jobInstanceService.getById(task.getJobInstanceId());
             if (Asserts.isNull(jobInstance)) {
@@ -679,7 +679,7 @@ public class TaskServiceImpl extends SuperServiceImpl<TaskMapper, Task> implemen
 
         String sql = String.format(
                 "create catalog my_catalog with(\n    "
-                        + "'type' = 'dinky_mysql',\n"
+                        + "'type' = 'studio_mysql',\n"
                         + "    'username' = "
                         + "'%s',\n    "
                         + "'password' = '%s',\n"

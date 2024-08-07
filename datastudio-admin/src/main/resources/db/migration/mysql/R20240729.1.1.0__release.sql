@@ -3,7 +3,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
-delete from dinky_sys_menu where `parent_id` = -1 and path = '/home';
+delete from studio_sys_menu where `parent_id` = -1 and path = '/home';
 
 delete from dinky_sys_menu where `parent_id` = 164 and path = '/dashboard/list';
 

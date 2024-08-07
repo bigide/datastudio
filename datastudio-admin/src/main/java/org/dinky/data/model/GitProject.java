@@ -37,7 +37,7 @@ import lombok.Data;
  * @author ZackYoung
  * @since 0.8.0
  */
-@TableName(value = "dinky_git_project")
+@TableName(value = "studio_git_project")
 @Data
 @ApiModel(value = "GitProject", description = "Git Project Information")
 public class GitProject extends SuperEntity<GitProject> {

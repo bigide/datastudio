@@ -41,7 +41,7 @@ import lombok.EqualsAndHashCode;
 /** role */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_role")
+@TableName("studio_role")
 @ApiModel(value = "Role", description = "Role Information")
 public class Role implements Serializable {
 

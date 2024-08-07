@@ -36,7 +36,7 @@ import lombok.EqualsAndHashCode;
 /** tenant use to isolate data */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_tenant")
+@TableName("studio_tenant")
 @ApiModel(value = "Tenant", description = "Tenant model")
 public class Tenant implements Serializable {
 

@@ -33,8 +33,8 @@ mysql -uroot -p123455
 use dinky
 
 # 导入升级脚本 请注意: 先执行 ddl.sql,再执行 dml.sql
-source /opt/dinky/sql/upgrade/1.0.0_schema/mysql/dinky_ddl.sql  
-source /opt/dinky/sql/upgrade/1.0.0_schema/mysql/dinky_dml.sql
+source /opt/dinky/sql/upgrade/1.0.0_schema/mysql/studio_ddl.sql  
+source /opt/dinky/sql/upgrade/1.0.0_schema/mysql/studio_dml.sql
 
 # 升级完成后,请检查是否有错误信息,如果有错误信息,请根据错误信息进行处理
 

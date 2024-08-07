@@ -48,7 +48,7 @@ public class DBUtil {
     }
 
     public static AppTask getTask(int taskId) throws SQLException {
-        Entity option = Entity.create("dinky_task").set("id", taskId).set("enabled", true);
+        Entity option = Entity.create("studio_task").set("id", taskId).set("enabled", true);
         List<AppTask> entities = db.find(option, AppTask.class);
         if (entities.size() <= 0) {
             throw new IllegalArgumentException(
@@ -60,7 +60,7 @@ public class DBUtil {
 
     public static String getDbSourceSQLStatement() throws SQLException {
         StringBuilder sb = new StringBuilder();
-        Entity option = Entity.create("dinky_database").set("enabled", true);
+        Entity option = Entity.create("studio_database").set("enabled", true);
         List<AppDatabase> entities = db.find(option, AppDatabase.class);
         for (AppDatabase entity : entities) {
             // Filter out items with empty FlinkConfiguration, as this item is optional in the front-end form and does
@@ -82,7 +82,7 @@ public class DBUtil {
      */
     public static String getGlobalVariablesStatement() throws SQLException {
         StringBuilder sb = new StringBuilder();
-        Entity option = Entity.create("dinky_fragment").set("enabled", true);
+        Entity option = Entity.create("studio_fragment").set("enabled", true);
         List<AppGlobalVariable> entities = db.find(option, AppGlobalVariable.class);
         for (AppGlobalVariable entity : entities) {
             sb.append(entity.getName())
@@ -94,7 +94,7 @@ public class DBUtil {
     }
 
     public static List<SysConfig> getSysConfigList() throws SQLException {
-        Entity option = Entity.create("dinky_sys_config");
+        Entity option = Entity.create("studio_sys_config");
         return db.find(option, SysConfig.class);
     }
 }

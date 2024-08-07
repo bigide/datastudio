@@ -32,7 +32,7 @@ title: 1.0.0 release
 - Flink Jar 任务定义由表单改为 EXECUTE JAR 语法
 - Application 模式的 datastudio-app-xxxx.jar 的定义移到集群配置中
 - 数据库DDL 部分不兼容升级
-- Dinky内置Catalog的类型属性由 `dlink_catalog` 变更为 `dinky_catalog`
+- Dinky内置Catalog的类型属性由 `dlink_catalog` 变更为 `studio_catalog`
 
 ### 重构
 - 重构数据开发

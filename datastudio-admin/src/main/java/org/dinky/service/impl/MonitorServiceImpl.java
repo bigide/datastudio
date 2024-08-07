@@ -84,7 +84,7 @@ public class MonitorServiceImpl extends ServiceImpl<MetricsMapper, Metrics> impl
         String sql = String.format(
                 "%s BIGINT, %s TEXT, %s TEXT, %s INTEGER",
                 JOB_ID, MonitorTableConstant.VALUE, MonitorTableConstant.HEART_TIME, MonitorTableConstant.DATE);
-        SqliteUtil.INSTANCE.createTable(MonitorTableConstant.DINKY_METRICS, sql);
+        SqliteUtil.INSTANCE.createTable(MonitorTableConstant.STUDIO_METRICS, sql);
     }
 
     private final Executor scheduleRefreshMonitorDataExecutor;
@@ -103,7 +103,7 @@ public class MonitorServiceImpl extends ServiceImpl<MetricsMapper, Metrics> impl
         String condition = getUtcCondition(startTime, endTime);
         List<MetricsVO> metricsVOList = new ArrayList<>();
         try (SqliteUtil.PreparedResultSet ps =
-                SqliteUtil.INSTANCE.read(MonitorTableConstant.DINKY_METRICS, condition)) {
+                SqliteUtil.INSTANCE.read(MonitorTableConstant.STUDIO_METRICS, condition)) {
             ResultSet read = ps.getRs();
             while (read.next()) {
                 MetricsVO metricsVO = new MetricsVO();

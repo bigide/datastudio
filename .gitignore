@@ -40,11 +40,11 @@ target/*
 */*/*/target/*
 
 # Dinky Web gitignore
-datastudio-web/node_modules/*
-datastudio-web/node/*
-datastudio-web/dist/*
-datastudio-web/.mfsu-production
-datastudio-web/pnpm-lock.yaml
+datastudio-ui/node_modules/*
+datastudio-ui/node/*
+datastudio-ui/dist/*
+datastudio-ui/.mfsu-production
+datastudio-ui/pnpm-lock.yaml
 
 datastudio-admin/src/main/resources/static/*
 datastudio-admin/tmp/*

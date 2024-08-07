@@ -30,6 +30,6 @@
     <name>DataStudio : Catalog</name>
 
     <modules>
-        <module>datastudio-catalog-mysql</module>
+        <module>datastudio-catalog-mysql-1.18</module>
     </modules>
 </project>

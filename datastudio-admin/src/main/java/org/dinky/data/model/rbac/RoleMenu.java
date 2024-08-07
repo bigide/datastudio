@@ -37,7 +37,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-@TableName("dinky_sys_role_menu")
+@TableName("studio_sys_role_menu")
 @Data
 @ApiModel(value = "RoleMenu", description = "Role-Menu Relationship Information")
 public class RoleMenu implements Serializable {

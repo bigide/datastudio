@@ -38,7 +38,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
-@TableName(value = "dinky_dashboard")
+@TableName(value = "studio_dashboard")
 @Data
 @ApiModel(value = "Dashboard", description = "Dashboard Information")
 public class Dashboard extends Model<Dashboard> {

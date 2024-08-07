@@ -20,8 +20,8 @@
 package org.dinky.data.constant;
 
 public final class MonitorTableConstant {
-    public static final String DINKY_DB = "dinky_db";
-    public static final String DINKY_METRICS = "dinky_metrics";
+    public static final String STUDIO_DB = "studio_db";
+    public static final String STUDIO_METRICS = "studio_metrics";
     public static final String HEART_TIME = "heart_time";
     public static final String JOB_ID = "job_id";
     public static final String VALUE = "value";

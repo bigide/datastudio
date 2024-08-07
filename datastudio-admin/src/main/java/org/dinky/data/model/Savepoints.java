@@ -49,7 +49,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_savepoints")
+@TableName("studio_savepoints")
 @ApiModel(value = "Savepoints", description = "Savepoints Information")
 public class Savepoints implements Serializable {
 

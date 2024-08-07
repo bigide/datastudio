@@ -29,8 +29,8 @@ title: 1.0.1 升级到 1.0.2
 use dinky
 
 # 导入升级脚本 请注意: 先执行 ddl.sql,再执行 dml.sql
-source /opt/dinky/sql/upgrade/1.0.2_schema/mysql/dinky_ddl.sql  
-source /opt/dinky/sql/upgrade/1.0.2_schema/mysql/dinky_dml.sql
+source /opt/dinky/sql/upgrade/1.0.2_schema/mysql/studio_ddl.sql  
+source /opt/dinky/sql/upgrade/1.0.2_schema/mysql/studio_dml.sql
 
 # 升级完成后,请检查是否有错误信息,如果有错误信息,请根据错误信息进行处理
 
@@ -46,8 +46,8 @@ exit
 use dinky
 
 # 导入升级脚本 请注意: 先执行 ddl.sql,再执行 dml.sql
-先执行 /opt/dinky/sql/upgrade/1.0.2_schema/postgre/dinky_ddl.sql  
-再执行 /opt/dinky/sql/upgrade/1.0.2_schema/postgre/dinky_dml.sql
+先执行 /opt/dinky/sql/upgrade/1.0.2_schema/postgre/studio_ddl.sql  
+再执行 /opt/dinky/sql/upgrade/1.0.2_schema/postgre/studio_dml.sql
 
 # 升级完成后,请检查是否有错误信息,如果有错误信息,请根据错误信息进行处理
 

@@ -66,7 +66,7 @@ public class MetricsContextHolder {
         String sql = String.format(
                 "%s BIGINT, %s TEXT, %s TEXT, %s INTEGER",
                 JOB_ID, MonitorTableConstant.VALUE, MonitorTableConstant.HEART_TIME, MonitorTableConstant.DATE);
-        SqliteUtil.INSTANCE.createTable(MonitorTableConstant.DINKY_METRICS, sql);
+        SqliteUtil.INSTANCE.createTable(MonitorTableConstant.STUDIO_METRICS, sql);
     }
 
     // Create a ThreadFactory with custom naming
@@ -110,7 +110,7 @@ public class MetricsContextHolder {
             try {
                 final List<String> columns = Arrays.asList(
                         JOB_ID, MonitorTableConstant.VALUE, MonitorTableConstant.HEART_TIME, MonitorTableConstant.DATE);
-                SqliteUtil.INSTANCE.write(MonitorTableConstant.DINKY_METRICS, columns, values);
+                SqliteUtil.INSTANCE.write(MonitorTableConstant.STUDIO_METRICS, columns, values);
             } catch (SQLException e) {
                 log.error("Failed to write metrics to SQLite", e);
                 return;

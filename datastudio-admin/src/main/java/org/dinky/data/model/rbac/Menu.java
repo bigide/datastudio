@@ -50,7 +50,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("dinky_sys_menu")
+@TableName("studio_sys_menu")
 public class Menu implements Serializable {
 
     private static final long serialVersionUID = 8117367692336619625L;

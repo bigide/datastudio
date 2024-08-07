@@ -151,7 +151,7 @@ public class SqlGatewayWsContext {
         if (db == null) {
             db = Db.use(new SimpleDataSource(url, username, password));
         }
-        Entity option = Entity.create("dinky_fragment").set("enabled", true);
+        Entity option = Entity.create("studio_fragment").set("enabled", true);
         List<FragmentVariable> entities = db.find(option, FragmentVariable.class);
         Map<String, String> variableMap = new LinkedHashMap<>();
         if (entities != null) {

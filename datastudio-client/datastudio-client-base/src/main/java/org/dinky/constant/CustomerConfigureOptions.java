@@ -40,10 +40,10 @@ public class CustomerConfigureOptions {
     public static final ConfigOption<String> REST_FORMAT_TYPE =
             key("rest.formatType").stringType().defaultValue("DEFAULT").withDescription("for savepoint format type");
 
-    public static final ConfigOption<String> DINKY_HOST =
+    public static final ConfigOption<String> STUDIO_HOST =
             key("dinky.dinkyHost").stringType().noDefaultValue().withDescription("dinky local address");
 
-    public static final ConfigOption<Integer> DINKY_PORT =
+    public static final ConfigOption<Integer> STUDIO_PORT =
             key("dinky.dinkyPort").intType().defaultValue(7125).withDescription("dinky local port");
 
     public static final ConfigOption<String> EXEC_SQL_FILE = key("dinky.sql.file")
@@ -51,7 +51,7 @@ public class CustomerConfigureOptions {
             .defaultValue("job.sql")
             .withDescription("dinky exec sql file name at application model");
 
-    public static final ConfigOption<String> DINKY_CONF_DIR = key("kubernetes.dinky.conf.dir")
+    public static final ConfigOption<String> STUDIO_CONF_DIR = key("kubernetes.dinky.conf.dir")
             .stringType()
             .defaultValue("/opt/dinky/sql-exec/")
             .withDescription(

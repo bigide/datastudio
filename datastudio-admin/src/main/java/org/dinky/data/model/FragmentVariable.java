@@ -39,7 +39,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_fragment")
+@TableName("studio_fragment")
 @ApiModel(value = "FragmentVariable", description = "Fragment Variable Information")
 public class FragmentVariable extends SuperEntity<FragmentVariable> {
 

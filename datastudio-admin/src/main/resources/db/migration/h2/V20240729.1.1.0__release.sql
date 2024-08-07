@@ -1,9 +1,9 @@
-INSERT INTO `dinky_sys_menu` (`parent_id`, `name`, `path`, `component`, `perms`, `icon`, `type`, `display`, `order_num`,
+INSERT INTO `studio_sys_menu` (`parent_id`, `name`, `path`, `component`, `perms`, `icon`, `type`, `display`, `order_num`,
                               `create_time`, `update_time`, `note`)
 VALUES (-1, '工作台', '/home', './Home', 'home', 'HomeOutlined', 'C', 0, 1, '2024-07-29 11:53:38',
         '2024-07-29 11:53:38', NULL);
 
-INSERT INTO `dinky_sys_menu` (`parent_id`, `name`, `path`, `component`, `perms`, `icon`, `type`, `display`, `order_num`,
+INSERT INTO `studio_sys_menu` (`parent_id`, `name`, `path`, `component`, `perms`, `icon`, `type`, `display`, `order_num`,
                               `create_time`, `update_time`, `note`)
 VALUES (164, '仪表盘列表', '/dashboard/list', './Dashboard', 'dashboard:list', 'UnorderedListOutlined', 'F', 0, 167,
         '2024-07-29 15:37:46', '2024-07-29 15:37:46', NULL);

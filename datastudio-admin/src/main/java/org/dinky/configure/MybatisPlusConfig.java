@@ -59,25 +59,25 @@ public class MybatisPlusConfig {
     private final MybatisPlusFillProperties autoFillProperties;
 
     private static final Set<String> IGNORE_TABLE_NAMES = ImmutableSet.of(
-            "dinky_namespace",
-            "dinky_alert_group",
-            "dinky_alert_history",
-            "dinky_alert_instance",
-            "dinky_catalogue",
-            "dinky_cluster",
-            "dinky_cluster_configuration",
-            "dinky_database",
-            "dinky_fragment",
-            "dinky_history",
-            "dinky_jar",
-            "dinky_job_history",
-            "dinky_job_instance",
-            "dinky_role",
-            "dinky_savepoints",
-            "dinky_task",
-            "dinky_task_statement",
-            "dinky_git_project",
-            "dinky_task_version");
+            "studio_namespace",
+            "studio_alert_group",
+            "studio_alert_history",
+            "studio_alert_instance",
+            "studio_catalogue",
+            "studio_cluster",
+            "studio_cluster_configuration",
+            "studio_database",
+            "studio_fragment",
+            "studio_history",
+            "studio_jar",
+            "studio_job_history",
+            "studio_job_instance",
+            "studio_role",
+            "studio_savepoints",
+            "studio_task",
+            "studio_task_statement",
+            "studio_git_project",
+            "studio_task_version");
 
     @Bean
     @Profile("pgsql")

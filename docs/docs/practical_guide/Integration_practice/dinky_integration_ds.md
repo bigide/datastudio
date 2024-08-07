@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: dinky_integration_ds
+id: studio_integration_ds
 title: Dinky 集成 DolphinScheduler 
 ---
 
@@ -130,14 +130,14 @@ FROM
 
 4. 配置右侧 `任务配置` ,请根据实际情况填写,如对参数不了解, 请鼠标悬浮至表单的每项 label 右侧的 `?` 查看帮助信息
 
-![dinky_job_desc](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/dinky_integration_ds/dinky_job_desc.png)
+![studio_job_desc](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/studio_integration_ds/studio_job_desc.png)
 
 5. 在 Dinky 1.0.0 及以后,必须要发布任务才能 推送至 DolphinScheduler, 点击 `发布` 按钮, 等待任务发布成功后，页面会自动刷新,从而出现 `推送按钮`。
 6. 点击 `推送` 按钮, 配置推送参数, 在 Dinky 1.0.0 及以后, 支持了配置前置依赖, 请根据实际情况填写 
 :::warning 注意
 选择前置任务后，任务将会在前置任务执行成功后才会执行,请自行合理选择,避免任务循环依赖,本平台不做依赖检查
 :::
-![push_ds](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/dinky_integration_ds/push_ds.png)
+![push_ds](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/studio_integration_ds/push_ds.png)
 
 7. 配置完成之后, 点击 `完成` 按钮, 等待推送成功
 
@@ -146,7 +146,7 @@ FROM
 1. 进入 `项目管理` -> 点击`Dinky`项目(此为在`配置中心`中配置的项目名) -> `工作流定义` ,点击工作流列表中备注为`系统添加` 的工作流
 2. 即可看到刚才在 Dinky 侧创建的任务`datagen` 已经被推送至 DolphinScheduler,且可以看到其依赖关系已经被正确设置
 如图: (忽略其他任务,只关注 `datagen` 任务即可)
-![push_ds_workflow_page](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/dinky_integration_ds/push_ds_workflow_page.png)
+![push_ds_workflow_page](http://pic.dinky.org.cn/dinky/docs/zh-CN/practical_guide/Integration_practice/studio_integration_ds/push_ds_workflow_page.png)
 
 3. 返回到 `工作流定义` 页面, 将该工作流上线, 可点击`运行`按钮, 运行该工作流, 也可配置定时调度配置, 定时调度配置请参考 DolphinScheduler 官方文档
 4. 剩余操作请参考 DolphinScheduler 官方文档, 本文档不再赘述

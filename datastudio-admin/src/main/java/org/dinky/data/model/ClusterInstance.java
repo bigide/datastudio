@@ -35,7 +35,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_cluster")
+@TableName("studio_cluster")
 @ApiModel(value = "ClusterInstance", description = "ClusterInstance")
 public class ClusterInstance extends SuperEntity<ClusterInstance> {
 

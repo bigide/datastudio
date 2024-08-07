@@ -44,7 +44,7 @@ public class CdcSourceTests {
                 .append("  'scan.startup.mode' = 'initial',\n")
                 .append("  'parallelism' = '1',\n")
                 .append("  'source.server-time-zone' = 'UTC',\n")
-                .append("  'table-name' = 'dinky\\.dinky_flink_document',\n")
+                .append("  'table-name' = 'dinky\\.studio_flink_document',\n")
                 .append("  'sink.connector'='print'\n")
                 .append(")")
                 .toString();

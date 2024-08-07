@@ -42,7 +42,7 @@ import lombok.Data;
 
 @Data
 @ApiModel(value = "LoginLog", description = "Login Log Information")
-@TableName("dinky_sys_login_log")
+@TableName("studio_sys_login_log")
 public class LoginLog implements Serializable {
 
     private static final long serialVersionUID = -3922488670506709018L;

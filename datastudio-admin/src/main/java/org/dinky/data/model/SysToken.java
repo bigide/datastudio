@@ -46,7 +46,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("dinky_sys_token")
+@TableName("studio_sys_token")
 @ApiModel(value = "SysToken", description = "System Token Information")
 public class SysToken implements Serializable {
     private static final long serialVersionUID = 3579444102399317143L;

@@ -33,7 +33,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_udf_manage")
+@TableName("studio_udf_manage")
 @ApiModel(value = "UDFTemplate", description = "User-Defined Function Template")
 @Builder
 @NoArgsConstructor

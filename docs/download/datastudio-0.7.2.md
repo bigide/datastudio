@@ -14,7 +14,7 @@ Dinky 0.7.2 是一个新功能和 bug 修复版本。
 
 :::warning 注意
 此版本有表结构变更 <br/>
-需要按需执行 **sql/upgrade/0.7.2_schema/mysql/dinky_ddl.sql**
+需要按需执行 **sql/upgrade/0.7.2_schema/mysql/studio_ddl.sql**
 :::
 
 ### 新功能

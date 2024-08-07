@@ -18,13 +18,5 @@
         <module>datastudio-app-1.18</module>
     </modules>
 
-    <profiles>
 
-        <profile>
-            <id>web</id>
-            <modules>
-                <module>../datastudio-web</module>
-            </modules>
-        </profile>
-    </profiles>
 </project>

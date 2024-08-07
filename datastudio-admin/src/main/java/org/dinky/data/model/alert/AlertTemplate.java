@@ -30,7 +30,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_alert_template")
+@TableName("studio_alert_template")
 @ApiModel(value = "AlertTemplate", description = "AlertTemplate")
 public class AlertTemplate extends SuperEntity<AlertTemplate> {
     @ApiModelProperty(value = "name", required = true, dataType = "String", example = "# 11 \n > 11")

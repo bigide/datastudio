@@ -37,9 +37,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/** @TableName dinky_metrics */
+/** @TableName studio_metrics */
 @EqualsAndHashCode(callSuper = true)
-@TableName(value = "dinky_metrics")
+@TableName(value = "studio_metrics")
 @Data
 @ApiModel(value = "Metrics", description = "Metrics Information")
 public class Metrics extends Model<Metrics> {

@@ -39,7 +39,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_catalogue")
+@TableName("studio_catalogue")
 public class Catalogue extends SuperEntity<Catalogue> {
 
     private static final long serialVersionUID = 4659379420249868394L;

@@ -44,9 +44,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-/** @TableName dinky_resources */
+/** @TableName studio_resources */
 @EqualsAndHashCode(callSuper = true)
-@TableName(value = "dinky_resources")
+@TableName(value = "studio_resources")
 @Data
 @ApiModel(value = "Resources", description = "Resource Information")
 @Builder

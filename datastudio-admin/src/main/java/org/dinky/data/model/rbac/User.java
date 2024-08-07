@@ -50,7 +50,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_user")
+@TableName("studio_user")
 @ApiModel(value = "User", description = "User Information")
 public class User implements Serializable {
     private static final long serialVersionUID = -1077801296270024204L;

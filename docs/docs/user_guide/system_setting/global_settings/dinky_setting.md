@@ -1,6 +1,6 @@
 ---
 position: 1
-id: dinky_setting
+id: studio_setting
 sidebar_position: 1
 title: Dinky 环境配置
 ---
@@ -10,7 +10,7 @@ title: Dinky 环境配置
 Dinky 服务。
 :::
 
-![global_setting_dinky](http://pic.dinky.org.cn/dinky/docs/zh-CN/user_guide/system_setting/global_settings/dinky_setting/global_setting_dinky.png)
+![global_setting_dinky](http://pic.dinky.org.cn/dinky/docs/zh-CN/user_guide/system_setting/global_settings/studio_setting/global_setting_dinky.png)
 
 **参数配置说明:**
 :::warning 注意

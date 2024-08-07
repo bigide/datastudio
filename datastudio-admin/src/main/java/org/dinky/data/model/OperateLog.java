@@ -32,7 +32,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@TableName("dinky_sys_operate_log")
+@TableName("studio_sys_operate_log")
 @ApiModel(value = "OperateLog", description = "Operate Log Information")
 public class OperateLog implements Serializable {
 

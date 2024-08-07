@@ -42,7 +42,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_alert_instance")
+@TableName("studio_alert_instance")
 public class AlertInstance extends SuperEntity<AlertInstance> {
 
     private static final long serialVersionUID = -3435401513220527001L;

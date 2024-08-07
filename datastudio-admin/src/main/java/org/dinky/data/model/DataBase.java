@@ -45,7 +45,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(value = "dinky_database", autoResultMap = true)
+@TableName(value = "studio_database", autoResultMap = true)
 @ApiModel(value = "DataBase", description = "DataBase Register")
 public class DataBase extends SuperEntity<DataBase> {
 

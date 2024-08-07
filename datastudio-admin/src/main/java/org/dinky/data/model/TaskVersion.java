@@ -46,7 +46,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName(value = "dinky_task_version", autoResultMap = true)
+@TableName(value = "studio_task_version", autoResultMap = true)
 @ApiModel(value = "TaskVersion", description = "Task Version Information")
 public class TaskVersion implements Serializable {
 

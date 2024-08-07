@@ -156,7 +156,7 @@ public class Submitter {
         Configuration configuration =
                 (Configuration) executor.getStreamExecutionEnvironment().getConfiguration();
         String sqlFileName = configuration.get(CustomerConfigureOptions.EXEC_SQL_FILE);
-        String confDir = configuration.get(CustomerConfigureOptions.DINKY_CONF_DIR);
+        String confDir = configuration.get(CustomerConfigureOptions.STUDIO_CONF_DIR);
         File sqlFile = new File(sqlFileName);
         if (!sqlFile.exists()) {
             sqlFile = new File(confDir, sqlFileName);

@@ -22,7 +22,7 @@ spring:
     group: true # Enable grouping
     locations:
       - classpath:db/migration/${spring.profiles.active}
-    table: _dinky_flyway_schema_history
+    table: _studio_flyway_schema_history
     placeholder-replacement: false # Placeholder Replacement
     baseline-on-migrate: true  # Baseline during migration
     baseline-version: 20240506.1.0.2 # Baseline version

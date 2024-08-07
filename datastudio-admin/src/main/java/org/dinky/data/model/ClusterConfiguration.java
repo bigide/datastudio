@@ -38,7 +38,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_cluster_configuration")
+@TableName("studio_cluster_configuration")
 @ApiModel(value = "ClusterConfiguration", description = "if your cluster type is yarn ,the record is there")
 public class ClusterConfiguration extends SuperEntity<ClusterConfiguration> {
 

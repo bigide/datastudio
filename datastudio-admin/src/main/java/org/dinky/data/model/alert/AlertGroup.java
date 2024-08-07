@@ -38,7 +38,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("dinky_alert_group")
+@TableName("studio_alert_group")
 @ApiModel(value = "AlertGroup", description = "Alert Group")
 public class AlertGroup extends SuperEntity<AlertGroup> {
 

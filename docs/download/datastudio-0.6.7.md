@@ -14,7 +14,7 @@ Dinky 0.6.7 是一个修复的版本。
 :::warning 注意
 该版本多租户功能暂未开放
 此版本有表结构变更 <br/>
-需要按需执行 **sql/upgrade/0.6.7_schema/mysql/dinky_ddl.sql** 文件的增量 DDL
+需要按需执行 **sql/upgrade/0.6.7_schema/mysql/studio_ddl.sql** 文件的增量 DDL
 :::
 
 ### 新功能
